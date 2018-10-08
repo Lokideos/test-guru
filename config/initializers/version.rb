@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module TestGuru
+module Application
   VERSION = "0.0.1"
 end

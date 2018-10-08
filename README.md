@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project Test Guru is web application for creating tests and participating in them.
+This project is currently in development and under guidance of Thinknetica learning project mentors.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Test Guru entities:
+1) Test;
+2) Question;
+3) Answer;
+4) User;
+5) Comment.

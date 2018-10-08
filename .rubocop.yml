@@ -20,7 +20,7 @@ Metrics/LineLength:
   Max: 100
 
 Style/StringLiterals:
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
 
 Style/Documentation:
   Enabled: false

@@ -18,7 +18,7 @@ module TestGuru
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.i18n.default_locale = :ru
-    config.time_zone = "Moscow"
-    config.active_record.default_timezone = "Moscow"
+    config.time_zone = 'Moscow'
+    config.active_record.default_timezone = 'Moscow'
   end
 end

@@ -8,4 +8,6 @@ Test Guru entities:
 2) Question;
 3) Answer;
 4) User;
-5) Comment.
+5) Comment;
+6) Result;
+7) Dio.

@@ -4,17 +4,17 @@ AllCops:
   Exclude:
     - '**/bin/**/*'
     - '**/config/**/*'
-    - '**/db/**/*'
     - '**/lib/**/*'
     - '**/log/**/*'
     - '**/storage/**/*'
-    - '**/test/**/*'
     - '**/tmp/**/*'
     - '**/vedor/**/'
     - 'Gemfile'
     - 'config.ru'
     - 'Rakefile'
-
+    - 'db/seeds.rb'
+    - 'db/schema.rb'
+    - 'test/test_helper.rb'
 
 Metrics/LineLength:
   Max: 100

@@ -12,7 +12,6 @@ AllCops:
     - 'Gemfile'
     - 'config.ru'
     - 'Rakefile'
-    - 'db/seeds.rb'
     - 'db/schema.rb'
     - 'test/test_helper.rb'
 

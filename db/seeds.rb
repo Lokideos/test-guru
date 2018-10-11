@@ -53,3 +53,9 @@ Answer.create([{ body: 'Answer to ruby Metaprogramming question', question_id: 1
 User.create([{ name: 'Bob', role: 'admin' },
              { name: 'Alice', role: 'basic_user' },
              { name: 'Dio', role: 'moderator' }])
+
+Progress.create([{ test_id: 1, user_id: 1, status: 'in_progress' },
+                 { test_id: 2, user_id: 1, status: 'finished' },
+                 { test_id: 3, user_id: 1, status: 'finished' },
+                 { test_id: 1, user_id: 2, status: 'in_progress' },
+                 { test_id: 9, user_id: 3, status: 'in_progress' }])

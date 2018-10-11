@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_113543) do
+ActiveRecord::Schema.define(version: 2018_10_11_160223) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -27,22 +27,22 @@ ActiveRecord::Schema.define(version: 2018_10_11_113543) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "progresses", force: :cascade do |t|
-    t.integer "test_id"
-    t.integer "user_id"
-    t.string "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["test_id"], name: "index_progresses_on_test_id"
-    t.index ["user_id"], name: "index_progresses_on_user_id"
-  end
-
   create_table "questions", force: :cascade do |t|
     t.string "body", null: false
     t.integer "test_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
+  end
+
+  create_table "test_progresses", force: :cascade do |t|
+    t.integer "test_id"
+    t.integer "user_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_test_progresses_on_test_id"
+    t.index ["user_id"], name: "index_test_progresses_on_user_id"
   end
 
   create_table "tests", force: :cascade do |t|

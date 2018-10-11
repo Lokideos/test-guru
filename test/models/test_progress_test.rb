@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class ProgressTest < ActiveSupport::TestCase
+class TestProgressTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

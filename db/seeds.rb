@@ -54,8 +54,8 @@ users = User.create([{ name: 'Bob', role: 'admin' },
                      { name: 'Alice', role: 'basic_user' },
                      { name: 'Dio', role: 'moderator' }])
 
-Progress.create([{ test: tests[0], user: users[0], status: 'in_progress' },
-                 { test: tests[1], user: users[0], status: 'finished' },
-                 { test: tests[2], user: users[0], status: 'finished' },
-                 { test: tests[0], user: users[1], status: 'in_progress' },
-                 { test: tests[8], user: users[2], status: 'in_progress' }])
+TestProgress.create([{ test: tests[0], user: users[0], status: 'in_progress' },
+                     { test: tests[1], user: users[0], status: 'finished' },
+                     { test: tests[2], user: users[0], status: 'finished' },
+                     { test: tests[0], user: users[1], status: 'in_progress' },
+                     { test: tests[8], user: users[2], status: 'in_progress' }])

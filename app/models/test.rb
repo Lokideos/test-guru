@@ -7,6 +7,8 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User', foreign_key: :author_id
 
+  validates :title, presence: true
+
   scope :with_level, ->(level) { where(level: level) }
   scope :easy, -> { where(level: 0..1) }
   scope :normal, -> { where(level: 2..4) }

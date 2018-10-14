@@ -7,6 +7,6 @@ class Test < ApplicationRecord
   belongs_to :category
 
   def self.with_category(category)
-    joins(:category).where('categories.title = ?', category).pluck(:title)
+    joins(:category).where(categories: { title: category }).order(created_at: :desc).pluck(:title)
   end
 end

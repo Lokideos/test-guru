@@ -5,6 +5,7 @@ class Test < ApplicationRecord
   has_many :test_progresses
   has_many :users, through: :test_progresses
   belongs_to :category
+  belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   def self.with_category(category)
     joins(:category).where(categories: { title: category }).order(created_at: :desc).pluck(:title)

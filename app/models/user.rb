@@ -5,6 +5,5 @@ class User < ApplicationRecord
   has_many :tests, through: :test_progresses
   has_many :created_tests, class_name: 'Test', foreign_key: 'author_id'
 
-  validates :name, presence: true
-  validates :email, presence: true
+  validates :name, :email, presence: true
 end

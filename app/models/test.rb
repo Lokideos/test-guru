@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Test < ApplicationRecord
+  EASY_MIN = 0
+  EASY_MAX = 1
+  NORMAL_MIN = 2
+  NORMAL_MAX = 4
+  BRUTAL_MIN = 5
+
   has_many :questions
   has_many :test_progresses
   has_many :users, through: :test_progresses
@@ -13,9 +19,9 @@ class Test < ApplicationRecord
   validate :validate_level_value
 
   scope :with_level, ->(level) { where(level: level) }
-  scope :easy, -> { where(level: 0..1) }
-  scope :normal, -> { where(level: 2..4) }
-  scope :brutal, -> { where('level > ?', 5) }
+  scope :easy, -> { where(level: EASY_MIN..EASY_MAX) }
+  scope :normal, -> { where(level: NORMAL_MIN..NORMAL_MAX) }
+  scope :brutal, -> { where('level > ?', BRUTAL_MIN) }
 
   scope :with_category, lambda { |category|
                           joins(:category)

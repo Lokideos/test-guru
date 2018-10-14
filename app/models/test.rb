@@ -12,7 +12,13 @@ class Test < ApplicationRecord
   scope :normal, -> { where(level: 2..4) }
   scope :brutal, -> { where('level > ?', 5) }
 
-  def self.with_category(category)
-    joins(:category).where(categories: { title: category }).order(created_at: :desc).pluck(:title)
-  end
+  scope :with_category, lambda { |category|
+                          joins(:category)
+                            .where(categories: { title: category })
+                            .by_date_reversed
+                            .titles_only
+                        }
+
+  scope :by_date_reversed, -> { order(created_at: :desc) }
+  scope :titles_only, -> { pluck(:title) }
 end

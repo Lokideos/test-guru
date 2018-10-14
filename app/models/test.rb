@@ -8,6 +8,8 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   validates :title, presence: true
+  validates :title, uniqueness: { scope: :level }
+
   validate :validate_level_value
 
   scope :with_level, ->(level) { where(level: level) }

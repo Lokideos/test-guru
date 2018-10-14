@@ -8,6 +8,7 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :author_id
 
   validates :title, presence: true
+  validate :validate_level_value
 
   scope :with_level, ->(level) { where(level: level) }
   scope :easy, -> { where(level: 0..1) }
@@ -23,4 +24,10 @@ class Test < ApplicationRecord
 
   scope :by_date_reversed, -> { order(created_at: :desc) }
   scope :titles_only, -> { pluck(:title) }
+
+  private
+
+  def validate_level_value
+    errors.add(:level) if level.to_i.negative?
+  end
 end

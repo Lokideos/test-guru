@@ -9,8 +9,7 @@ class Test < ApplicationRecord
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
-
-  validate :validate_level_value
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   scope :with_level, ->(level) { where(level: level) }
   scope :easy, -> { with_level(0..1) }
@@ -26,10 +25,4 @@ class Test < ApplicationRecord
 
   scope :by_date_reversed, -> { order(created_at: :desc) }
   scope :titles_only, -> { pluck(:title) }
-
-  private
-
-  def validate_level_value
-    errors.add(:level) if level.to_i.negative?
-  end
 end

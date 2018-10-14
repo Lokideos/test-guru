@@ -21,7 +21,7 @@ class Test < ApplicationRecord
   scope :with_level, ->(level) { where(level: level) }
   scope :easy, -> { where(level: EASY_MIN..EASY_MAX) }
   scope :normal, -> { where(level: NORMAL_MIN..NORMAL_MAX) }
-  scope :brutal, -> { where('level > ?', BRUTAL_MIN) }
+  scope :brutal, -> { where('level >= ?', BRUTAL_MIN) }
 
   scope :with_category, lambda { |category|
                           joins(:category)

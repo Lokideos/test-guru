@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ChangeEmailToUsers < ActiveRecord::Migration[5.2]
+class AddEmailToUsers < ActiveRecord::Migration[5.2]
   def change
     add_column :users, :email, :string
     change_column :users, :email, :string, null: false

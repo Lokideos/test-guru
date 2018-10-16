@@ -2,7 +2,7 @@
 
 class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index show new create]
-  before_action :find_question, only: :show
+  before_action :find_question, only: %i[show destroy]
 
   def index
     render inline: '<%= @test.questions.all.pluck(:body) %>'
@@ -21,6 +21,12 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.new(question_params)
     render inline: '<%= @question.body %> was successfully saved' if @question.save
+  end
+
+  def destroy
+    @question.destroy
+
+    render plain: 'Question was successfully destroyed'
   end
 
   private

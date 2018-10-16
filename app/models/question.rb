@@ -5,5 +5,4 @@ class Question < ApplicationRecord
   belongs_to :test
 
   validates :body, presence: true
-  validates_associated :answers
 end

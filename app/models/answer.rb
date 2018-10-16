@@ -9,7 +9,7 @@ class Answer < ApplicationRecord
 
   validates :body, presence: true
 
-  validate :validate_answers_quantity_for_question_max
+  validate :validate_answers_quantity_for_question_max, on: :create
 
   scope :correct, -> { where(correct: true) }
 

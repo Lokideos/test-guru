@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index show]
+  before_action :find_test, only: %i[index show new create]
   before_action :find_question, only: :show
 
   def index
@@ -16,7 +16,18 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def new; end
+
+  def create
+    @question = @test.questions.new(question_params)
+    render inline: '<%= @question.body %> was successfully saved' if @question.save
+  end
+
   private
+
+  def question_params
+    params.require(:question).permit(:body)
+  end
 
   def find_test
     @test = Test.find(params[:test_id])

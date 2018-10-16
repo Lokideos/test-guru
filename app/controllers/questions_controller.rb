@@ -4,6 +4,8 @@ class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index show new create]
   before_action :find_question, only: %i[show destroy]
 
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+
   def index
     render inline: '<%= @test.questions.all.pluck(:body) %>'
   end
@@ -41,5 +43,9 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def rescue_with_question_not_found
+    render plain: 'This question does not exist'
   end
 end

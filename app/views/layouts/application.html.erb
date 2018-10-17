@@ -10,6 +10,25 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="page-header">
+      <div class="container">
+        <div class="logo"><img src="/test-guru-logo.png" alt="Test Guru Logo"></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container clearfix">
+        <copyright class="footer-copyright">
+          &copy <%= DateTime.now.year %> Loki <a href="https://github.com/Lokideos/test-guru" target="_blank">Test-Guru</a>
+          <p>Учебный проект в онлайн-школе <a href="https://www.thinknetica.com" target="_blank">Thinknetica</a></p>
+        </copyright>
+      </div>
+    </footer>
   </body>
 </html>

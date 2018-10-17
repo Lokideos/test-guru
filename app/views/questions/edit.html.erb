@@ -1,0 +1,7 @@
+<h1>Edit <%= @question.body %></h1>
+
+<%= render 'form', resources: @question %>
+
+<p>
+  <%= link_to 'Back', test_questions_path(@test) %>
+</p>

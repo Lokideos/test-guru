@@ -1,30 +1,47 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test, except: %i[show destroy]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[index new create]
+  before_action :find_question, only: %i[show edit destroy]
+  before_action :find_associated_test, only: %i[update destroy show edit]
 
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+  # rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render inline: '<%= @test.questions.all.pluck(:body) %>'
+    @questions = @test.questions
   end
 
-  def show
-    render inline: '<%= @question.body %>'
+  def show; end
+
+  def new
+    @question = Question.new
   end
 
-  def new; end
+  def edit; end
 
   def create
     @question = @test.questions.new(question_params)
-    render inline: '<%= @question.body %> was successfully saved' if @question.save
+
+    if @question.save
+      redirect_to test_questions_path
+    else
+      render :new
+    end
+  end
+
+  def update
+    if @question.update(question_params)
+      @test = @question.test
+      redirect_to test_questions_path(@test)
+    else
+      render :edit
+    end
   end
 
   def destroy
     @question.destroy
 
-    render plain: 'Question was successfully destroyed'
+    redirect_to test_questions_path(@test)
   end
 
   private
@@ -35,6 +52,11 @@ class QuestionsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:test_id])
+  end
+
+  def find_associated_test
+    @question = Question.find(params[:id])
+    @test = @question.test
   end
 
   def find_question

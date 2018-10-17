@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_test, except: :destroy
+  before_action :find_test, except: %i[show destroy]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -11,11 +11,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    if @test.questions.include? @question
-      render inline: '<%= @question.body %>'
-    else
-      render plain: 'There is no such question for this test'
-    end
+    render inline: '<%= @question.body %>'
   end
 
   def new; end

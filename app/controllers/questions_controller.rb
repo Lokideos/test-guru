@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   before_action :find_question, only: %i[show edit destroy]
   before_action :find_associated_test, only: %i[update destroy show edit]
 
-  # rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
     @questions = @test.questions
@@ -31,7 +31,6 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      @test = @question.test
       redirect_to test_questions_path(@test)
     else
       render :edit

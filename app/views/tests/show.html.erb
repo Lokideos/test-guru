@@ -1,5 +1,15 @@
 <h1>Test <%= @test.title %></h1>
 
-<%= render @test %>
+<p><%= render @test %></p>
+
+<table>
+  <tr>
+    <tr>
+    <th>Body</th>
+    <th colspan="3">Actions</th>  
+  </tr>
+
+  <%= render @questions %>
+</table>
 
 <p><%= link_to 'Back', tests_path %></p>

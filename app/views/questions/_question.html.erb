@@ -1,7 +1,7 @@
 <tr>
   <th><%= question.body %></th>
-  <th><%= link_to 'Show', question_path(question) %></th>
-  <th><%= link_to 'Edit', edit_question_path(question) %></th>
+  <th><%= link_to 'Show', question_path(question) %> |</th>
+  <th><%= link_to 'Edit', edit_question_path(question) %> |</th>
   <th><%= link_to 'Destroy', 
                   question_path(question),
                   method: :delete,

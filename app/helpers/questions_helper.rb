@@ -4,8 +4,10 @@ module QuestionsHelper
   def question_header(question)
     test = question.test.title
 
-    return "Create New #{test} Question" if current_page?(controller: 'questions', action: 'show')
-
-    "Edit #{test} Question"
+    if question.new_record?
+      "Create New #{test} Question"
+    else
+      "Edit #{test} Question"
+    end
   end
 end

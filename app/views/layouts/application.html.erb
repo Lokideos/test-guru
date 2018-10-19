@@ -10,11 +10,7 @@
   </head>
 
   <body>
-    <header class="page-header">
-      <div class="container">
-        <div class="logo"><img src="/test-guru-logo.png" alt="Test Guru Logo"></div>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
 
     <main>
       <div class="container">
@@ -22,13 +18,6 @@
       </div>
     </main>
 
-    <footer class="page-footer">
-      <div class="container clearfix">
-        <copyright class="footer-copyright">
-          &copy <%= current_year %> Loki <%= github_link('Lokideos', 'test-guru') %>
-          <p>Учебный проект в онлайн-школе <a href="https://www.thinknetica.com" target="_blank">Thinknetica</a></p>
-        </copyright>
-      </div>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

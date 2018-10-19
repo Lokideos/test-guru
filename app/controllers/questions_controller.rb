@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   def show; end
 
   def new
-    @question = Question.new
+    @question = @test.questions.new
   end
 
   def edit; end
@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
     @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to test_questions_path
+      redirect_to test_path(@test)
     else
       render :new
     end

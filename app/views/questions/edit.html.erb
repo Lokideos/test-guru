@@ -1,0 +1,7 @@
+<h1><%= question_header(@question) %></h1>
+
+<%= render 'form', question: @question %>
+
+<p>
+  <%= link_to 'Back', test_path(@question.test) %>
+</p>

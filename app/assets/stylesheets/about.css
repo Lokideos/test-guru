@@ -33,37 +33,9 @@ body {
   background-color: #363636;
 }
 
-.info-area {
+main {
   min-height: 800px;
 }
-
-.info-area .headline {
-  padding-top: 40px;
-  font-weight: bold;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #a38b70;
-}
-
-.info-area .description {
-  padding-top: 40px;
-  color: #a38b70;
-}
-
-.info-area .description a {
-  text-decoration: none;
-  color: #a38b70;
-}
-
-.info-area .description a:hover {
-  color: #8d475a;
-}
-
-.info-area .description a:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
 
 .page-footer {
   min-height: 100px;

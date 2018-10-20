@@ -9,9 +9,9 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
 
   def accept!(answer_ids)
-    self.correct_question += 1 if correct_answer?(answer_ids)
+    self.correct_questions += 1 if correct_answer?(answer_ids)
 
-    self.current_question = next_question
+    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
     save!
   end
 
@@ -37,6 +37,6 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end

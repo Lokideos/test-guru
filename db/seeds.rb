@@ -69,10 +69,3 @@ Answer.create([{ body: 'Correct Answer to ruby Metaprogramming question',
                { body: 'Answer to Unity project structure question', question: questions[9] },
                { body: 'Answer to Unity reactive programming paradigm', question: questions[10] },
                { body: 'Answer to Unity assets creation through 3dmax', question: questions[11] }])
-
-TestPassage.create([{ test: tests[0], user: users[0], current_question: questions[0] },
-                    { test: tests[1], user: users[0], current_question: questions[1] },
-                    { test: tests[2], user: users[0], current_question: questions[2],
-                      correct_questions: 2 },
-                    { test: tests[0], user: users[1] },
-                    { test: tests[8], user: users[2] }])

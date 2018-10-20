@@ -58,8 +58,9 @@ Answer.create([{ body: 'Answer to ruby Metaprogramming question', question: ques
                { body: 'Answer to Unity reactive programming paradigm', question: questions[9] },
                { body: 'Answer to Unity assets creation through 3dmax', question: questions[10] }])
 
-TestProgress.create([{ test: tests[0], user: users[0], finished: true },
-                     { test: tests[1], user: users[0], finished: true },
-                     { test: tests[2], user: users[0], finished: true },
-                     { test: tests[0], user: users[1] },
-                     { test: tests[8], user: users[2] }])
+TestPassage.create([{ test: tests[0], user: users[0], current_question: questions[0] },
+                    { test: tests[1], user: users[0], current_question: questions[1] },
+                    { test: tests[2], user: users[0], current_question: questions[2],
+                      correct_questions: 2 },
+                    { test: tests[0], user: users[1] },
+                    { test: tests[8], user: users[2] }])

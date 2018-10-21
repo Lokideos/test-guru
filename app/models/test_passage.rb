@@ -11,6 +11,8 @@ class TestPassage < ApplicationRecord
 
   scope :last_test_entry, ->(test) { where(test_id: test).last }
 
+  PASS_TEST_THRESHOLD = 85
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
@@ -22,7 +24,7 @@ class TestPassage < ApplicationRecord
   end
 
   def test_passed?
-    (correct_questions / test.questions.count * 100).floor >= 85
+    (correct_questions / test.questions.count * 100).floor >= PASS_TEST_THRESHOLD
   end
 
   def current_question_number

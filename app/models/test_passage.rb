@@ -11,7 +11,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
-    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
+    self.current_question = next_question
     save!
   end
 
@@ -26,6 +26,8 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
+    return false unless answer_ids
+
     correct_answers_count = correct_answers.count
 
     (correct_answers_count == correct_answers.where(id: answer_ids).count) &&

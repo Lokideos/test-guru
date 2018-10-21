@@ -8,6 +8,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  scope :last_test_entry, ->(test) { where(test_id: test).last }
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 

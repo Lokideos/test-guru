@@ -43,7 +43,7 @@ class TestsController < ApplicationController
 
   def start
     @user.tests.push(@test)
-    redirect_to @user.test_passages.where(test_id: @test.id).last
+    redirect_to @user.test_passages.last_test_entry(@test)
   end
 
   private

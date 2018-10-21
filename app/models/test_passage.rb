@@ -21,6 +21,10 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def test_passed?
+    (correct_questions / test.questions.count * 100).floor >= 85
+  end
+
   private
 
   def before_validation_set_first_question

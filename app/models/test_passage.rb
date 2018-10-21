@@ -7,13 +7,13 @@ class TestPassage < ApplicationRecord
                                 optional: true
 
   before_validation :before_validation_set_first_question, on: :create
+  before_update :next_question
 
   scope :last_test_entry, ->(test) { where(test_id: test).last }
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
-    self.current_question = next_question
     save!
   end
 

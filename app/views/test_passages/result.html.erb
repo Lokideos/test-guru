@@ -1,0 +1,7 @@
+<% if @test_passage.test_passed? %>
+  <h1 class="test-passed">The <%= @test_passage.test.title %> Test was completed!</h1>
+<% else %>
+  <h1 class="test-failed">Sorry! The <%= @test_passage.test.title %> Test was failed!</h1>
+<% end %>
+
+<%= link_to 'Back', tests_path %>

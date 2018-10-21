@@ -35,6 +35,7 @@ tests = Test.create([{ title: 'Ruby', level: 0, category: categories[0], author:
                      { title: 'Unity Art', level: 1, category: categories[2], author: users[2] }])
 
 questions = Question.create([{ body: 'Ruby Metaprogramming question', test: tests[0] },
+                             { body: 'Ruby Exceptions question', test: tests[0] },
                              { body: 'Rails assets pipeline question', test: tests[1] },
                              { body: 'Node JS npm question', test: tests[2] },
                              { body: 'Advanced Rails TDD/BDD question', test: tests[3] },
@@ -46,20 +47,25 @@ questions = Question.create([{ body: 'Ruby Metaprogramming question', test: test
                              { body: 'Unity reactive programming paradigm', test: tests[9] },
                              { body: 'Unity assets creation through 3dmax', test: tests[10] }])
 
-Answer.create([{ body: 'Answer to ruby Metaprogramming question', question: questions[0] },
-               { body: 'Answer to Rails assets pipeline question', question: questions[1] },
-               { body: 'Answer to Node JS npm question', question: questions[2] },
-               { body: 'Answer to Advanced Rails TDD/BDD question', question: questions[3] },
-               { body: 'Answer to HTML & CSS tables formatting question', question: questions[4] },
-               { body: 'Answer to HTML5 video question', question: questions[5] },
-               { body: 'Answer to CSS3 flexbox grid question', question: questions[6] },
-               { body: 'Answer to JS basics control flow question', question: questions[7] },
-               { body: 'Answer to Unity project structure question', question: questions[8] },
-               { body: 'Answer to Unity reactive programming paradigm', question: questions[9] },
-               { body: 'Answer to Unity assets creation through 3dmax', question: questions[10] }])
-
-TestProgress.create([{ test: tests[0], user: users[0], finished: true },
-                     { test: tests[1], user: users[0], finished: true },
-                     { test: tests[2], user: users[0], finished: true },
-                     { test: tests[0], user: users[1] },
-                     { test: tests[8], user: users[2] }])
+Answer.create([{ body: 'Correct Answer to ruby Metaprogramming question',
+                 question: questions[0],
+                 correct: true },
+               { body: '2nd Correct Answer to ruby Metaprogramming question',
+                 question: questions[0],
+                 correct: true },
+               { body: '3rd Answer to ruby Metaprogramming question', question: questions[0] },
+               { body: '4rd Answer to ruby Metaprogramming question', question: questions[0] },
+               { body: 'Correct Answer to ruby Metaprogramming question', question:
+                 questions[1],
+                 correct: true },
+               { body: '2nd Answer to ruby Metaprogramming question', question: questions[1] },
+               { body: 'Answer to Rails assets pipeline question', question: questions[2] },
+               { body: 'Answer to Node JS npm question', question: questions[3] },
+               { body: 'Answer to Advanced Rails TDD/BDD question', question: questions[4] },
+               { body: 'Answer to HTML & CSS tables formatting question', question: questions[5] },
+               { body: 'Answer to HTML5 video question', question: questions[6] },
+               { body: 'Answer to CSS3 flexbox grid question', question: questions[7] },
+               { body: 'Answer to JS basics control flow question', question: questions[8] },
+               { body: 'Answer to Unity project structure question', question: questions[9] },
+               { body: 'Answer to Unity reactive programming paradigm', question: questions[10] },
+               { body: 'Answer to Unity assets creation through 3dmax', question: questions[11] }])

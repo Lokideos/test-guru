@@ -2,6 +2,14 @@
 
 <%= render @question %>
 
+<h2>Answers</h2>
+
+<%= link_to 'New Answer', new_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>
+
 <p>
   <%= link_to 'Back', test_path(@question.test) %>
 </p>

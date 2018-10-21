@@ -25,8 +25,8 @@ class TestPassage < ApplicationRecord
     (correct_questions / test.questions.count * 100).floor >= 85
   end
 
-  def current_question_number(question)
-    test.questions.index(question) + 1
+  def current_question_number
+    test.questions.index(current_question) + 1
   end
 
   private

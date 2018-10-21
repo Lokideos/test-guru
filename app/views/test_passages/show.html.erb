@@ -6,7 +6,7 @@
 
 <p>
   Total Questions: <%= @test_passage.test.questions.count %><br>
-  Current question: <%= @test_passage.current_question_number(@test_passage.current_question) %>  
+  Current question: <%= @test_passage.current_question_number %>  
 </p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>

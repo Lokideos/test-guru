@@ -67,5 +67,4 @@ ActiveRecord::Schema.define(version: 2018_10_23_080210) do
     t.string "email", null: false
     t.string "password_digest"
   end
-
 end

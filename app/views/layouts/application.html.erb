@@ -12,11 +12,6 @@
   <body>
     <%= render 'layouts/header' %>
 
-    <% if logged_in? %>
-      <p class="nav user"> Welcome, <b><%= current_user.email %></b> Guru</p>
-      <%= link_to 'Log out', session_path(session[:user_id]), method: :delete %>
-    <% end %>
-
     <main>
       <div class="container">
         <%= yield %>

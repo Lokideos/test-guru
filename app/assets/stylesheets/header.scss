@@ -1,0 +1,47 @@
+.page-header .logo {
+  float: left;
+}
+
+.page-header .project-title {
+  float: left;
+  margin-left: 160px;
+  margin-top: -20px;
+  font-size: 50px;
+}
+
+.page-header .project-title a {
+  text-decoration: none;
+  color: #a38b70;
+}
+
+.page-header .project-title a:hover {
+  text-decoration: none;
+  color: #8d475a;
+}
+
+.page-header .project-title a:active{
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-header .nav {
+  float: right;  
+}
+
+.page-header .nav a {
+  text-decoration: none;
+  color: #a38b70;
+}
+
+.page-header .nav a:hover {
+  color: red;
+  background: none;
+  color: #8d475a;
+}
+
+.page-header .nav a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-header .nav-user {
+  color: #a38b70; 
+}

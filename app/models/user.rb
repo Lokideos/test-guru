@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   validates :name, :email, presence: true
 
+  has_secure_password
+
   def test_passage(test)
     test_passages.find_by(test_id: test.id)
   end

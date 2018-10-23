@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+  def index
+    redirect_to login_path
+  end
+
   def new; end
 
   def create
@@ -10,7 +14,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to tests_path
     else
-      render :new, alert: 'Are you a Guru? Verify your Email and Password please'
+      flash[:alert] = 'Are you a Guru? Verify your Email and Password please'
+      render :new # , alert: 'Are you a Guru? Verify your Email and Password please'  - doesn't work
     end
   end
 end

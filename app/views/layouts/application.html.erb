@@ -12,6 +12,10 @@
   <body>
     <%= render 'layouts/header' %>
 
+    <% if logged_in? %>
+      <p class="nav user"> Welcome, <b><%= current_user.email %></b> Guru</p>
+    <% end %>
+
     <main>
       <div class="container">
         <%= yield %>

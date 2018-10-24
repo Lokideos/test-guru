@@ -14,8 +14,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      cookies[:start_path] = root_path
-      redirect_to cookies[:start_path]
+      redirect_to after_login_url
     else
       flash[:alert] = 'Are you a Guru? Verify your Email and Password please'
       render :new # , alert: 'Are you a Guru? Verify your Email and Password please'  - doesn't work
@@ -25,5 +24,13 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = ''
     redirect_to root_path
+  end
+
+  private
+
+  def after_login_url
+    return cookies[:current_path] if cookies[:current_path]
+
+    root_path
   end
 end

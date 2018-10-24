@@ -13,6 +13,14 @@
     <%= render 'layouts/header' %>
 
     <main>
+      <div class="announcer">
+        <div class="container">
+          <% flash.each do |type, message| %>
+            <%= flash_message(type, message) %>
+          <% end %>
+        </div>
+      </div>
+
       <div class="container">
         <%= yield %>
       </div>

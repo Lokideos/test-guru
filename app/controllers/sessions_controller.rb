@@ -3,10 +3,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authenticate_user!
 
-  def index
-    redirect_to login_path
-  end
-
   def new; end
 
   def create
@@ -16,8 +12,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to after_login_url
     else
-      flash[:alert] = 'Are you a Guru? Verify your Email and Password please'
-      render :new # , alert: 'Are you a Guru? Verify your Email and Password please'  - doesn't work
+      redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
     end
   end
 

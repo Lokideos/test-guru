@@ -16,6 +16,12 @@ users = User.create([{ email: 'bob@example.com', password: 'bob123',
                        confirmed_at: DateTime.now },
                      { email: 'test@test.com', password: '111111',
                        confirmed_at: DateTime.now },
+                     { email: 'namedtest@test.com', password: '222222',
+                       confirmed_at: DateTime.now, first_name: 'TestName',
+                       last_name: 'TestLastName' },
+                     { email: 'admintest@test.com', password: '222222',
+                       confirmed_at: DateTime.now, first_name: 'AdminName',
+                       last_name: 'AdminLastName', type: 'Admin' },
                      { email: 'dio@theworld.com', password: 'theworld',
                        confirmed_at: DateTime.now }])
 

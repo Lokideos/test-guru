@@ -10,9 +10,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([{ name: 'Bob', role: 'admin', email: 'bob@example.com' },
-                     { name: 'Alice', role: 'basic_user', email: 'alice@example.com' },
-                     { name: 'Dio', role: 'moderator', email: 'dio@theworld.com' }])
+users = User.create([{ name: 'Bob', role: 'admin', email: 'bob@example.com',
+                       password: 'bob' },
+                     { name: 'Alice', role: 'basic_user', email: 'alice@example.com',
+                       password: 'alice' },
+                     { name: 'Test', role: 'test', email: 'test@test.com',
+                       password: '1' },
+                     { name: 'Dio', role: 'moderator', email: 'dio@theworld.com',
+                       password: 'theworld' }])
 
 categories = Category.create([{ title: 'Backend web development' },
                               { title: 'Frontend web development' },

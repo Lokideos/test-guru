@@ -17,9 +17,8 @@ class User < ApplicationRecord
 
   EMAIL_FORMAT = /\A[a-zA-Z]*[@]{1}[a-z]*[.]{1}[a-z]{2,3}\z/
 
-  validates :email, presence: true
-  validates :email, uniqueness: true
-  validates :email, format: { with: EMAIL_FORMAT, message: 'must be valid email address' }
+  validates :email, presence: true, uniqueness: true,
+                    format: { with: EMAIL_FORMAT, message: 'must be valid email address' }
 
   def test_passage(test)
     test_passages.find_by(test_id: test.id)

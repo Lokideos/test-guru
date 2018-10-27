@@ -76,3 +76,13 @@ en:
         header: 'Edit'
       new:
         header: 'New Test Creation'
+
+  tests:
+    test:
+      start: 'Start'
+    index:
+      header: 'All Tests'
+      title: 'Title'
+      level: 'Level'
+      questions_quantity: 'Questions'
+      actions: 'Actions'

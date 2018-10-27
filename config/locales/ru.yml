@@ -48,3 +48,14 @@ ru:
         header: 'Редактировать'
       new:
         header: 'Создание Нового Теста'
+
+  tests:
+    test:
+      start: 'Пройти тест'
+    index:
+      header: 'Доступные Тесты'
+      title: 'Название'
+      level: 'Сложность'
+      questions_quantity: 'Вопросы'
+      actions: 'Действия'
+

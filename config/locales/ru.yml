@@ -7,6 +7,13 @@ ru:
     show: 'Перейти'
     edit: 'Редактировать'
     back: 'Назад'
+    logout: 'Выйти'
+    login: 'Войти'
+    signup: 'Зарегистрироваться'
+
+  layouts:
+    footer:
+      credits: 'Учебный проект в онлайн-школе'
 
   helpers:
     submit:
@@ -37,6 +44,9 @@ ru:
 
 
   admin:
+    nav:
+      panel_header: 'Панель Администратора TestGuru'
+      greetings: 'Добро пожаловать, %{email} Гуру'
     tests:     
       test:
         destroy: 'Удалить'

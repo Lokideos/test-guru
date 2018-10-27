@@ -71,3 +71,7 @@ ru:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'
 
+  test_mailer:
+    completed_test:
+      subject: "Вы завершили тест в TestGuru!"
+

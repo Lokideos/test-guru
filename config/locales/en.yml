@@ -101,3 +101,6 @@ en:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'
 
+  test_mailer:
+    completed_test:
+      subject: "You have completed the Test Guru test!"

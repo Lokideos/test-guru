@@ -44,8 +44,9 @@ en:
       test:
         create: 'Create Test'
         update: 'Update Test'
-      test_passage:
-        update: 'Next'
+      question:
+        create: 'Create Question'
+        update: 'Update Question'
     label:
       test:
         title: 'Title'
@@ -80,6 +81,15 @@ en:
         header: 'Edit  %{title}'
       new:
         header: 'New Test Creation'
+
+    questions:
+      question:
+        destroy: 'Destroy'
+      show:
+        answers: 'Answers'
+        new_answer: 'New Answer'
+      new:
+        header: 'Create New Question'
 
   tests:
     test:

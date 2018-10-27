@@ -13,6 +13,9 @@ ru:
       test:
         create: 'Создать Тест'
         update: 'Обновить Тест'
+      question:
+        create: 'Создать Вопрос'
+        update: 'Обновить Вопрос'
     label:
       test:
         title: 'Название'
@@ -50,6 +53,15 @@ ru:
         header: 'Редактировать %{title}'
       new:
         header: 'Создание Нового Теста'
+
+    questions:
+      question:
+        destroy: 'Удалить'
+      show:
+        answers: 'Ответы'
+        new_answer: 'Создать Новый Ответ'
+      new:
+        header: 'Создание Нового Вопроса'
 
   tests:
     test:

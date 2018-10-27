@@ -3,6 +3,7 @@ en:
     models:
       test: 'Test'
       test_passage: 'Test Passage'
+      question: 'Question'
 
     attributes:
       test:
@@ -11,6 +12,8 @@ en:
         category: 'Category'
       test_passage:
         correct_questions: 'Correct questions'
+      question:
+        body: 'Question'
 
     errors:
       messages:

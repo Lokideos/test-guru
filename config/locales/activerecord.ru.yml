@@ -3,6 +3,7 @@ ru:
     models:
       test: 'Тест'
       test_passage: 'Прохождение Теста'
+      question: 'Вопрос'
 
     attributes:
       test:
@@ -11,6 +12,9 @@ ru:
         category: 'Категория'
       test_passage:
         correct_questions: 'Успешно пройденные вопросы'
+      question:
+        body: 'Вопрос'
+
 
     errors:
       messages:

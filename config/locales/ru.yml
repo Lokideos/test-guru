@@ -18,6 +18,8 @@ ru:
         title: 'Название'
         level: 'Сложность'
         category_id: 'Категория'
+    select:
+      prompt: 'Выберите Категорию'
 
   shared:
     errors:

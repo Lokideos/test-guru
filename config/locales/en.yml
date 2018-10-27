@@ -49,6 +49,8 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+    select:
+      prompt: 'Select Category'
 
   shared:
     errors:

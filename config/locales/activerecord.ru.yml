@@ -4,6 +4,7 @@ ru:
       test: 'Тест'
       test_passage: 'Прохождение Теста'
       question: 'Вопрос'
+      answer: 'Ответ'
 
     attributes:
       test:
@@ -14,6 +15,9 @@ ru:
         correct_questions: 'Успешно пройденные вопросы'
       question:
         body: 'Вопрос'
+      answer:
+        body: 'Ответ'
+        correct: 'Правильность'
 
 
     errors:

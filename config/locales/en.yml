@@ -47,6 +47,9 @@ en:
       question:
         create: 'Create Question'
         update: 'Update Question'
+      answer:
+        create: 'Create Answer'
+        update: 'Update Answer'
     label:
       test:
         title: 'Title'
@@ -90,6 +93,18 @@ en:
         new_answer: 'New Answer'
       new:
         header: 'Create New Question'
+
+    answers:
+      answer:
+        destroy: 'Destroy'
+      show:
+        header: 'Question'
+        answer_body: 'Answer'
+        answer_correct: 'Correct'
+      new:
+        header: 'New Answer'
+      edit:
+        header: 'Editing Answer'
 
   tests:
     test:

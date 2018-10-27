@@ -16,6 +16,9 @@ ru:
       question:
         create: 'Создать Вопрос'
         update: 'Обновить Вопрос'
+      answer:
+        create: 'Создать Ответ'
+        update: 'Обновить Ответ'
     label:
       test:
         title: 'Название'
@@ -62,6 +65,18 @@ ru:
         new_answer: 'Создать Новый Ответ'
       new:
         header: 'Создание Нового Вопроса'
+
+    answers:
+      answer:
+        destroy: 'Удалить'
+      show:
+        header: 'Вопрос'
+        answer_body: 'Ответ'
+        answer_correct: 'Правильность'
+      new:
+        header: 'Создание Ответа'
+      edit:
+        header: 'Редактирование Ответа'
 
   tests:
     test:

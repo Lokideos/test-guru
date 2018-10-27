@@ -43,6 +43,8 @@ en:
     signup: 'Sign Up'
 
   layouts:
+    header:
+      greetings: 'Welcome, %{email} Guru'
     footer:
       credits: 'Learning project in'
 

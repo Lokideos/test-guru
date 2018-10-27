@@ -12,6 +12,8 @@ ru:
     signup: 'Зарегистрироваться'
 
   layouts:
+    header:
+      greetings: 'Добро пожаловать, %{email} Гуру'
     footer:
       credits: 'Учебный проект в онлайн-школе'
 

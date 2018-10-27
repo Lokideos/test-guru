@@ -16,11 +16,10 @@ class Admin::TestsController < Admin::BaseController
   def edit; end
 
   def create
-    @test = Test.new(test_params)
-    @test.author = current_user
+    @test = current_user.created_tests.new(test_params)
 
     if @test.save
-      redirect_to @test
+      redirect_to [:admin, @test]
     else
       render :new
     end
@@ -28,7 +27,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to @test
+      redirect_to [:admin, @test]
     else
       render :edit
     end

@@ -42,12 +42,12 @@ ru:
         questions_quantity: 'Вопросы'
         actions: 'Действия'
       show:
-        header: 'Тест'
+        header: 'Тест %{title}'
         create_new_question: 'Создать Новый Вопрос'
         questions_body: 'Вопрос'
         actions: 'Действия'
       edit:
-        header: 'Редактировать'
+        header: 'Редактировать %{title}'
       new:
         header: 'Создание Нового Теста'
 

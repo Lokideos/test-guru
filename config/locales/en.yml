@@ -72,12 +72,12 @@ en:
         questions_quantity: 'Questions'
         actions: 'Actions'
       show:
-        header: 'Test'
+        header: 'Test %{title}'
         create_new_question: 'Create New Question'
         questions_body: 'Question'
         actions: 'Actions'
       edit:
-        header: 'Edit'
+        header: 'Edit  %{title}'
       new:
         header: 'New Test Creation'
 

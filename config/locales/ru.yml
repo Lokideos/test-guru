@@ -3,6 +3,16 @@ ru:
     messages:
       delete_confirmation: 'Вы уверены?'
 
+  devise:
+    registrations:
+      new:
+        signup: 'Зарегистрироваться'
+        min_characters_requirment: 'минимум %{length} знаков'
+    shared:
+      links:
+        forgot_password: 'Забыли пароль?'
+        confirmation_instructions: 'Не получили письма с подтверждением регистрации?'
+
   common:
     show: 'Перейти'
     edit: 'Редактировать'
@@ -28,11 +38,18 @@ ru:
       answer:
         create: 'Создать Ответ'
         update: 'Обновить Ответ'
+      user:
+        create: 'Войти'
     label:
       test:
         title: 'Название'
         level: 'Сложность'
         category_id: 'Категория'
+      user:
+        email: 'Электронная почта'
+        password: 'Пароль'
+        remember_me: 'Запомнить'
+        password_confirmation: 'Подтверждение пароля'
     select:
       prompt: 'Выберите Категорию'
 

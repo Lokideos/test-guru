@@ -34,6 +34,16 @@ en:
     messages:
       delete_confirmation: 'Are you sure?'
 
+  devise:
+    registrations:
+      new:
+        signup: 'Sign Up'
+        min_characters_requirment: '%{length} characters minimum'
+    shared:
+      links:
+        forgot_password: 'Forgot your password?'
+        confirmation_instructions: "Didn't receive confirmation instructions?"
+
   common:
     show: 'Show'
     edit: 'Edit'
@@ -64,6 +74,11 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+      user:
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
     select:
       prompt: 'Select Category'
 

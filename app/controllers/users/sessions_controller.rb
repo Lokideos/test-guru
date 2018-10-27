@@ -7,18 +7,14 @@ class Users::SessionsController < Devise::SessionsController
   # def new
   #   super
   # end
-
-  # rubocop:disable Metrics/AbcSize
   # POST /resource/sign_in
   def create
-    self.resource = warden.authenticate!(auth_options)
-    set_flash_message!(:notice, :signed_in, first_name: @user.first_name,
+    super
+    return unless @user.first_name && @user.last_name
+
+    set_flash_message!(:notice, :logged_in, first_name: @user.first_name,
                                             last_name: @user.last_name)
-    sign_in(resource_name, resource)
-    yield resource if block_given?
-    respond_with resource, location: after_sign_in_path_for(resource)
   end
-  # rubocop:enable Metrics/AbcSize
 
   # DELETE /resource/sign_out
   # def destroy

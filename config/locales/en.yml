@@ -44,6 +44,8 @@ en:
       test:
         create: 'Create Test'
         update: 'Update Test'
+      test_passage:
+        update: 'Next'
     label:
       test:
         title: 'Title'
@@ -88,3 +90,14 @@ en:
       level: 'Level'
       questions_quantity: 'Questions'
       actions: 'Actions'
+
+  test_passages:
+    show:
+      header: 'Passing the %{test_title} test'
+      total_questions: 'Total Questions: %{count}'
+      current_question: 'Current Question: %{number}'
+      next_question: 'Next Question'
+    result:
+      test_completed: 'Cogratulations! You have completed %{title} test!'
+      test_failed: 'You have failed %{title} test! Try again!'
+

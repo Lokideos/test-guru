@@ -2,12 +2,15 @@ ru:
   activerecord:
     models:
       test: 'Тест'
+      test_passage: 'Прохождение Теста'
 
     attributes:
       test:
         title: 'Название'
         level: 'Сложность'
         category: 'Категория'
+      test_passage:
+        correct_questions: 'Успешно пройденные вопросы'
 
     errors:
       messages:

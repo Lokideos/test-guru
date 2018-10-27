@@ -2,12 +2,15 @@ en:
   activerecord:
     models:
       test: 'Test'
+      test_passage: 'Test Passage'
 
     attributes:
       test:
         title: 'Title'
         level: 'Level'
         category: 'Category'
+      test_passage:
+        correct_questions: 'Correct questions'
 
     errors:
       messages:

@@ -1,7 +1,7 @@
 <% if @test_passage.test_passed? %>
-  <h1 class="test-passed">The <%= @test_passage.test.title %> Test was completed!</h1>
+  <h1 class="test-passed"><%= t('.test_completed', title: @test_passage.test.title) %></h1>
 <% else %>
-  <h1 class="test-failed">Sorry! The <%= @test_passage.test.title %> Test was failed!</h1>
+  <h1 class="test-failed"><%= t('.test_failed', title: @test_passage.test.title) %></h1>
 <% end %>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to t('common.back'), tests_path %>

@@ -61,3 +61,13 @@ ru:
       questions_quantity: 'Вопросы'
       actions: 'Действия'
 
+  test_passages:
+    show:
+      header: 'Вы проходите %{test_title} тест'
+      total_questions: 'Количество вопросов в тесте: %{count}'
+      current_question: 'Текущий вопрос: %{number}'
+      next_question: 'Следующий Вопрос'
+    result:
+      test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
+      test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'
+

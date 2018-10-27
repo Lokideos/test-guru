@@ -1,2 +1,50 @@
 ru:
-  something: 'Hello!'
+  data:
+    messages:
+      delete_confirmation: 'Вы уверены?'
+
+  common:
+    show: 'Перейти'
+    edit: 'Редактировать'
+    back: 'Назад'
+
+  helpers:
+    submit:
+      test:
+        create: 'Создать Тест'
+        update: 'Обновить Тест'
+    label:
+      test:
+        title: 'Название'
+        level: 'Сложность'
+        category_id: 'Категория'
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+
+  admin:
+    tests:     
+      test:
+        destroy: 'Удалить'
+      index:
+        header: 'Доступные Тесты'
+        new_test: 'Создать Новый Тест'
+        title: 'Название'
+        level: 'Сложность'
+        questions_quantity: 'Вопросы'
+        actions: 'Действия'
+      show:
+        header: 'Тест'
+        create_new_question: 'Создать Новый Вопрос'
+        questions_body: 'Вопрос'
+        actions: 'Действия'
+      edit:
+        header: 'Редактировать'
+      new:
+        header: 'Создание Нового Теста'

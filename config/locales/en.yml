@@ -30,4 +30,49 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  data:
+    messages:
+      delete_confirmation: 'Are you sure?'
+
+  common:
+    show: 'Show'
+    edit: 'Edit'
+    back: 'Back'
+
+  helpers:
+    submit:
+      test:
+        create: 'Create Test'
+        update: 'Update Test'
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  admin:
+    tests:
+      test:
+        destroy: 'Destroy'
+      index:
+        header: 'All Tests'
+        new_test: 'Create New Test'
+        title: 'Title'
+        level: 'Level'
+        questions_quantity: 'Questions'
+        actions: 'Actions'
+      show:
+        header: 'Test'
+        create_new_question: 'Create New Question'
+        questions_body: 'Question'
+        actions: 'Actions'
+      edit:
+        header: 'Edit'
+      new:
+        header: 'New Test Creation'

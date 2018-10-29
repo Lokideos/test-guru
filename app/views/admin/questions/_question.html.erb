@@ -1,10 +1,10 @@
 <tr>
   <th><%= question.body %></th>
-  <th><%= link_to 'Show', admin_question_path(question) %> |</th>
-  <th><%= link_to 'Edit', edit_admin_question_path(question) %> |</th>
-  <th><%= link_to 'Destroy', 
+  <th><%= link_to t('common.show'), admin_question_path(question) %> |</th>
+  <th><%= link_to t('common.edit'), edit_admin_question_path(question) %> |</th>
+  <th><%= link_to t('.destroy'), 
                   admin_question_path(question),
                   method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
+                  data: { confirm: t('data.messages.delete_confirmation') } %>
   </th>
 </tr>

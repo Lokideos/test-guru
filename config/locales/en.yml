@@ -30,4 +30,129 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  data:
+    messages:
+      delete_confirmation: 'Are you sure?'
+
+  devise:
+    registrations:
+      new:
+        signup: 'Sign Up'
+        min_characters_requirment: '%{length} characters minimum'
+    shared:
+      links:
+        forgot_password: 'Forgot your password?'
+        confirmation_instructions: "Didn't receive confirmation instructions?"
+
+  common:
+    show: 'Show'
+    edit: 'Edit'
+    back: 'Back'
+    logout: 'Log Out'
+    login: 'Log In'
+    signup: 'Sign Up'
+
+  layouts:
+    header:
+      greetings: 'Welcome, %{email} Guru'
+    footer:
+      credits: 'Learning project in'
+
+  helpers:
+    submit:
+      test:
+        create: 'Create Test'
+        update: 'Update Test'
+      question:
+        create: 'Create Question'
+        update: 'Update Question'
+      answer:
+        create: 'Create Answer'
+        update: 'Update Answer'
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
+      user:
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
+    select:
+      prompt: 'Select Category'
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  admin:
+    nav:
+      panel_header: 'TestGuru Admin Panel'
+      greetings: 'Welcome, %{email} Guru'
+    tests:
+      test:
+        destroy: 'Destroy'
+      index:
+        header: 'All Tests'
+        new_test: 'Create New Test'
+        title: 'Title'
+        level: 'Level'
+        questions_quantity: 'Questions'
+        actions: 'Actions'
+      show:
+        header: 'Test %{title}'
+        create_new_question: 'Create New Question'
+        questions_body: 'Question'
+        actions: 'Actions'
+      edit:
+        header: 'Edit  %{title}'
+      new:
+        header: 'New Test Creation'
+
+    questions:
+      question:
+        destroy: 'Destroy'
+      show:
+        answers: 'Answers'
+        new_answer: 'New Answer'
+      new:
+        header: 'Create New Question'
+
+    answers:
+      answer:
+        destroy: 'Destroy'
+      show:
+        header: 'Question'
+        answer_body: 'Answer'
+        answer_correct: 'Correct'
+      new:
+        header: 'New Answer'
+      edit:
+        header: 'Editing Answer'
+
+  tests:
+    test:
+      start: 'Start'
+    index:
+      header: 'All Tests'
+      title: 'Title'
+      level: 'Level'
+      questions_quantity: 'Questions'
+      actions: 'Actions'
+
+  test_passages:
+    show:
+      header: 'Passing the %{test_title} test'
+      total_questions: 'Total Questions: %{count}'
+      current_question: 'Current Question: %{number}'
+      next_question: 'Next Question'
+    result:
+      test_completed: 'Cogratulations! You have completed %{title} test!'
+      test_failed: 'You have failed %{title} test! Try again!'
+
+  test_mailer:
+    completed_test:
+      subject: "You have completed the Test Guru test!"

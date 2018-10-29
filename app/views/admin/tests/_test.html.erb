@@ -2,12 +2,12 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to 'Show', admin_test_path(test) %> |</td>
-  <td><%= link_to 'Edit', edit_admin_test_path(test) %> |</td>
+  <td><%= link_to t('common.show'), admin_test_path(test) %> |</td>
+  <td><%= link_to t('common.edit'), edit_admin_test_path(test) %> |</td>
   <td>
-    <%= link_to 'Destroy', 
+    <%= link_to t('.destroy'), 
                 admin_test_path(test),
                 method: :delete,
-                data: { confirm: 'Are you sure?' } %>  
+                data: { confirm: t('data.messages.delete_confirmation') } %>  
   </td>
 </tr>

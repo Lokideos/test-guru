@@ -35,3 +35,7 @@
   cursor: pointer;
 }
 
+.tests-grid .test-picker:active {
+  border-color: rgba(118, 178, 0, 0.5);
+  cursor: pointer;
+}

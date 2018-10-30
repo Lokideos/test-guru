@@ -19,6 +19,7 @@ ru:
     logout: 'Выйти'
     login: 'Войти'
     signup: 'Зарегистрироваться'
+    again: 'Еще раз'
 
   helpers:
     submit:
@@ -118,10 +119,10 @@ ru:
 
   test_passages:
     show:
-      header: 'Вы проходите %{test_title} тест'
+      header: 'Тест %{test_title}'
       total_questions: 'Количество вопросов в тесте: %{count}'
       current_question: 'Текущий вопрос: %{number}'
-      next_question: 'Следующий Вопрос'
+      next_question: 'Далее'
     result:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'

@@ -1,7 +1,28 @@
-<% if @test_passage.test_passed? %>
-  <h1 class="test-passed"><%= t('.test_completed', title: @test_passage.test.title) %></h1>
-<% else %>
-  <h1 class="test-failed"><%= t('.test_failed', title: @test_passage.test.title) %></h1>
-<% end %>
+<section class="test-passage-result">
+  <div class="test-passage-grid">
+    <% if @test_passage.test_passed? %>
+      <div class="icon-result icon-passed">
+        <img src="/test-guru-happy-face.png">
+      </div>
+      <div class="test-passed">
+        <%= t('.test_completed', title: @test_passage.test.title) %>
+      </div>
+    <% else %>
+      <div class="icon-result icon-failed">
+        <img src="/test-guru-sad-face.png">
+      </div>
+      <div class="test-failed">
+        <%= t('.test_failed', title: @test_passage.test.title) %>
+      </div>
+    <% end %>
+  </div>
 
-<%= link_to t('common.back'), tests_path %>
+  <div class="back-link-grid">
+    <div class="btn-test-passage">
+      <%= button_to t('common.again'), start_test_path(@test_passage.test), class: 'btn' %>
+    </div>
+    <div class="btn-test-passage">
+      <%= button_to t('common.back'), tests_path, method: :get, class: 'btn' %>
+    </div>
+  </div>
+</section>

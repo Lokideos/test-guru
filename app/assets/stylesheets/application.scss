@@ -8,6 +8,10 @@
 @import 'questions';
 @import 'answers';
 
+.btn.btn-default:focus {  
+  box-shadow: none;
+}
+  
 .btn-default {
   margin: 5px;
   min-width: 100px;

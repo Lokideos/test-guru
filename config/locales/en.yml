@@ -51,13 +51,7 @@ en:
     logout: 'Log Out'
     login: 'Log In'
     signup: 'Sign Up'
-
-  visual:
-    navigation:
-      greetings: 'Welcome, %{email} Guru'
-    footer:
-      credits: 'Learning project in'
-
+    
   helpers:
     submit:
       test:
@@ -83,6 +77,12 @@ en:
       prompt: 'Select Category'
 
   shared:
+    nav:
+      greetings: 'Welcome, %{email} Guru'
+    footer:
+      about: 'About'
+      author: 'Contact us'
+      credits: 'Learning project in'
     errors:
       header:
         one: "%{count} error detected"

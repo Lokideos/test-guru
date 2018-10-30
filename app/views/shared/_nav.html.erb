@@ -5,7 +5,7 @@
 
   <span class="navbar-text">
     <% if user_signed_in? %>
-      <b><%= t('layout.navigation.greetings', email: current_user.email) %></b> |
+      <b><%= t('.greetings', email: current_user.email) %></b> |
       <%= link_to t('common.logout'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('common.login'), new_user_session_path %> |

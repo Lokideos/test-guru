@@ -6,7 +6,6 @@ ru:
   devise:
     registrations:
       new:
-        signup: 'Зарегистрироваться'
         min_characters_requirment: 'минимум %{length} знаков'
     shared:
       links:
@@ -20,12 +19,6 @@ ru:
     logout: 'Выйти'
     login: 'Войти'
     signup: 'Зарегистрироваться'
-
-  layout:
-    navigation:
-      greetings: 'Добро пожаловать, %{email} Гуру'
-    footer:
-      credits: 'Учебный проект в онлайн-школе'
 
   helpers:
     submit:
@@ -54,6 +47,12 @@ ru:
       prompt: 'Выберите Категорию'
 
   shared:
+    nav:
+      greetings: 'Добро пожаловать, %{email} Гуру'
+    footer:
+      about: 'О проекте'
+      author: 'Свяжитесь с нами'
+      credits: 'Учебный проект в онлайн-школе'
     errors:
       header:
         few: "Обнаружено %{count} ошибки"

@@ -52,8 +52,8 @@ en:
     login: 'Log In'
     signup: 'Sign Up'
 
-  layouts:
-    header:
+  visual:
+    navigation:
       greetings: 'Welcome, %{email} Guru'
     footer:
       credits: 'Learning project in'

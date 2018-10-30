@@ -14,16 +14,17 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <%= render 'shared/nav' %>
 
-    <main>
-      <%= render 'layouts/announcer' %>
-
-      <div class="container">
-        <%= yield %>
+    <main class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col">
+          <%= render 'shared/announcer' %>     
+            <%= yield %>   
+        </div>   
       </div>
-    </main>
+    </main>    
 
-    <%= render 'layouts/footer' %>
+    <%= render 'shared/footer' %>    
   </body>
 </html>

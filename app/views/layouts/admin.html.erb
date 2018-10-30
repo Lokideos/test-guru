@@ -10,16 +10,16 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+    <%= render 'shared/header' %>
 
     <main>
-      <%= render 'layouts/announcer' %>
+      <%= render 'shared/announcer' %>
       <%= render 'admin/nav' %>
       <div class="container">
         <%= yield %>
       </div>
     </main>
 
-    <%= render 'layouts/footer' %>
+    <%= render 'shared/footer' %>
   </body>
 </html>

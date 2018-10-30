@@ -21,8 +21,8 @@ ru:
     login: 'Войти'
     signup: 'Зарегистрироваться'
 
-  layouts:
-    header:
+  layout:
+    navigation:
       greetings: 'Добро пожаловать, %{email} Гуру'
     footer:
       credits: 'Учебный проект в онлайн-школе'

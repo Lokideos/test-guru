@@ -37,7 +37,6 @@ en:
   devise:
     registrations:
       new:
-        signup: 'Sign Up'
         min_characters_requirment: '%{length} characters minimum'
     shared:
       links:
@@ -51,7 +50,7 @@ en:
     logout: 'Log Out'
     login: 'Log In'
     signup: 'Sign Up'
-    
+
   helpers:
     submit:
       test:

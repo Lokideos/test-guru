@@ -114,12 +114,15 @@ ru:
         destroy: 'Удалить'
       show:
         header: 'Вопрос'
-        answer_body: 'Ответ'
-        answer_correct: 'Правильность'
+        body: 'Ответ: %{body}'
+        correct: 'Правильность:'
       new:
         header: 'Создание Ответа'
+        question_body: 'Вопрос: %{body}'
       edit:
         header: 'Редактирование Ответа'
+      form:
+        corret_flag: 'Корректный ответ'
 
   tests:
     test:

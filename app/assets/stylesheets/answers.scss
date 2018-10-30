@@ -30,3 +30,17 @@
 .answers-table .answers-table-content{
   display: table-row-group;
 }
+
+.chosen-answer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.chosen-answer a:hover {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.chosen-answer a:active {
+  color: #000000;
+}
+

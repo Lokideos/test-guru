@@ -142,12 +142,15 @@ en:
         destroy: 'Destroy'
       show:
         header: 'Question'
-        answer_body: 'Answer'
-        answer_correct: 'Correct'
+        body: 'Answer: %{body}'
+        correct: 'Correct: %{correct}'
       new:
         header: 'New Answer'
+        question_body: 'Question: %{body}'
       edit:
         header: 'Editing Answer'
+      form:
+        corret_flag: 'Correct'
 
   tests:
     test:

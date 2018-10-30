@@ -95,7 +95,7 @@ en:
       test:
         destroy: 'Destroy'
       index:
-        header: 'All Tests'
+        header: 'Pick up test'
         new_test: 'Create New Test'
         title: 'Title'
         level: 'Level'
@@ -135,12 +135,12 @@ en:
   tests:
     test:
       start: 'Start'
-    index:
-      header: 'All Tests'
-      title: 'Title'
       level: 'Level'
       questions_quantity: 'Questions'
-      actions: 'Actions'
+    index:
+      header: 'Pick up Test'
+      level: 'Level'
+      questions_quantity: 'Questions'
 
   test_passages:
     show:

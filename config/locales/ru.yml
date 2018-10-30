@@ -109,12 +109,12 @@ ru:
   tests:
     test:
       start: 'Пройти тест'
-    index:
-      header: 'Доступные Тесты'
-      title: 'Название'
       level: 'Сложность'
       questions_quantity: 'Вопросы'
-      actions: 'Действия'
+    index:
+      header: 'Выберите Тест'
+      level: 'Сложность'
+      questions_quantity: 'Вопросы'
 
   test_passages:
     show:

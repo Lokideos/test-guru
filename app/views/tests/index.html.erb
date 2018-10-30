@@ -1,11 +1,7 @@
-<h1><%= t('.header')%></h1>
+<section class="tests-pickup">
+  <h1 class="tests-headline"><%= t('.header')%></h1>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.questions_quantity') %></th>
-    <th><%= t('.actions') %></th>
-  </tr>  
-  <%= render @tests %>
-</table>
+  <div class="tests-grid">  
+    <%= render @tests %>  
+  </div>
+</div>

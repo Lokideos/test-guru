@@ -1,6 +1,5 @@
-<tr>
-  <td><%= test.title %></td>
-  <td><%= test.level %></td>
-  <td><%= test.questions.count %></td>
-  <td><%= button_to t('.start'), start_test_path(test) %></td>
-</tr>
+<%= button_to start_test_path(test), class: "test-picker" do %>
+  <p class="test-title"><%= test.title %></p>
+  <p class="test-level"><%= t('.level') %>: <%= level_in_human_form(test) %></p>
+  <p class="test-questions-qty"><%= t('.questions_quantity') %>: <%= test.questions.count %></p>
+<% end %>

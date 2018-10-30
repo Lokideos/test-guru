@@ -1,11 +1,10 @@
 body {
-  // background-color: #75227f;
   background-color: #17141f;
   color: white;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 
 .navbar {
-  // background-color: #79487f;
   background-color: #392e5c;
 }
 
@@ -20,7 +19,6 @@ body {
 }
 
 footer.page-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  height: 50px;
+  margin-top: -50px;
 }

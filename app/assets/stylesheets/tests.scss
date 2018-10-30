@@ -1,0 +1,37 @@
+.tests-pickup .tests-headline {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tests-grid .test-picker {
+  margin: 5px;
+  min-width: 300px;
+  min-height: 150px;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border: 10px solid #39235c;
+}
+
+.tests-grid .test-picker .test-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.tests-grid .test-picker .test-level,
+.tests-grid .test-picker .test-questions-qty {
+  text-align: left;
+}
+
+.tests-grid .test-picker:hover {
+  border-color: #76b200;
+  cursor: pointer;
+}
+

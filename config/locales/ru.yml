@@ -8,10 +8,12 @@ ru:
       new:
         login: 'Врата к Гуру'
         remember_flag: 'Запомнить меня'
+        email_placeholder: 'Введите Email'
     registrations:
       new:
         signup: 'Регистрация Гуру'
         min_characters_requirment: 'минимум %{length} знаков'
+        email_placeholder: 'Введите Email'
     shared:
       links:
         forgot_password: 'Забыли пароль?'

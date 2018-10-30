@@ -39,10 +39,12 @@ en:
       new:
         login: 'The Guru Gate'
         remember_flag: 'Remember me'
+        email_placeholder: 'Enter Email'
     registrations:
       new:
         signup: 'Guru Registration'
         min_characters_requirment: '%{length} characters minimum'
+        email_placeholder: 'Enter Email'
     shared:
       links:
         forgot_password: 'Forgot your password?'

@@ -87,6 +87,7 @@ en:
 
   shared:
     nav:
+      admin_panel: 'Admin Panel'
       greetings: 'Welcome, %{email} Guru'
     footer:
       about: 'About'

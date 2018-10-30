@@ -5,6 +5,9 @@
 
   <span class="navbar-text">
     <% if user_signed_in? %>
+      <% if current_user.admin? %>
+        <%= link_to t('.admin_panel'), admin_tests_path %> |
+      <% end %>
       <b><%= t('.greetings', email: current_user.email) %></b> |
       <%= link_to t('common.logout'), destroy_user_session_path, method: :delete %>
     <% else %>

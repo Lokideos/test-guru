@@ -35,8 +35,13 @@ en:
       delete_confirmation: 'Are you sure?'
 
   devise:
+    sessions:
+      new:
+        login: 'The Guru Gate'
+        remember_flag: 'Remember me'
     registrations:
       new:
+        signup: 'Guru Registration'
         min_characters_requirment: '%{length} characters minimum'
     shared:
       links:
@@ -63,6 +68,8 @@ en:
       answer:
         create: 'Create Answer'
         update: 'Update Answer'
+      user:
+        create: 'Log In'
     label:
       test:
         title: 'Title'

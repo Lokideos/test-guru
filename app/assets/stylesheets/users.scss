@@ -1,0 +1,39 @@
+.user-form .user-header {
+  margin: 20px;
+  text-align: center;
+}
+
+.user-form .card {
+  background-color: #392e5c;
+}
+
+.user-form a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.user-form a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-form a:active {
+  color: #000000;
+}
+
+.user-form .btn-user-container{  
+  text-align: center;
+}
+
+.user-form .btn-user {
+  min-width: 100px;
+  background-color: #17141f;
+  color: #ffffff;
+}
+
+.user-form .btn-user:hover {
+  background-color: rgba(23, 20, 31, 0.8);
+}
+
+.user-form .btn-user:active {
+  background-color: rgba(23, 20, 31, 0.8);
+}

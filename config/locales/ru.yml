@@ -4,8 +4,13 @@ ru:
       delete_confirmation: 'Вы уверены?'
 
   devise:
+    sessions:
+      new:
+        login: 'Врата к Гуру'
+        remember_flag: 'Запомнить меня'
     registrations:
       new:
+        signup: 'Регистрация Гуру'
         min_characters_requirment: 'минимум %{length} знаков'
     shared:
       links:
@@ -130,4 +135,3 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы завершили тест в TestGuru!"
-

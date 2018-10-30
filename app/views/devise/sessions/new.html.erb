@@ -1,26 +1,49 @@
-<h2><%= t('common.login') %></h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<section class="user-form">
+  <div class="row justify-content-center">
+    <div class="col col-md-4">
+      <h2 class="user-header"><%= t('.login') %></h2>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit %>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+  <div class="row justify-content-center">
+    <div class="col col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group">
+              <p>
+                <%= f.label :email %>
+                <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Enter email' %>
+              </p>
+
+              <p>
+                <%= f.label :password %>
+                <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+              </p>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div class="form-check">
+                <%= f.label :remember_me, class: 'form-check-label' do %>
+                  <%= f.check_box :remember_me, class: 'form-check-input' %>
+                    <%= t('.remember_flag') %>
+                <% end %>              
+              </div>
+            <% end -%>
+
+            <div class="container btn-user-container">
+              <div class="mt-2">
+                <%= f.submit class: "btn-user btn" %>
+              </div>
+            </div>
+            
+          <% end %>
+        </div>
+      </div>
+
+      <div class="mt-1">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</section>

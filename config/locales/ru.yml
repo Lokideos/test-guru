@@ -92,6 +92,7 @@ ru:
         title: 'Название: %{title}'
         category: 'Категория: %{category}'
         level: 'Сложность: %{level}'
+        questions: 'Вопросы'
       edit:
         header: 'Редактировать %{title}'
       new:

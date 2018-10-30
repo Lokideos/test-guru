@@ -120,6 +120,7 @@ en:
         title: 'Title: %{title}'
         category: 'Category: %{category}'
         level: 'Level: %{level}'
+        questions: 'Questions'
       edit:
         header: 'Edit  %{title}'
       new:

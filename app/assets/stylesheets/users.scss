@@ -1,39 +1,39 @@
-.user-form .user-header {
+.default-form .default-header {
   margin: 20px;
   text-align: center;
 }
 
-.user-form .card {
+.default-form .card {
   background-color: #392e5c;
 }
 
-.user-form a {
+.default-form a {
   text-decoration: none;
   color: #ffffff;
 }
 
-.user-form a:hover {
+.default-form a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.user-form a:active {
+.default-form a:active {
   color: #000000;
 }
 
-.user-form .btn-user-container{  
+.default-form .btn-default-container{  
   text-align: center;
 }
 
-.user-form .btn-user {
+.default-form .btn-default {
   min-width: 100px;
   background-color: #17141f;
   color: #ffffff;
 }
 
-.user-form .btn-user:hover {
+.default-form .btn-default:hover {
   background-color: rgba(23, 20, 31, 0.8);
 }
 
-.user-form .btn-user:active {
+.default-form .btn-default:active {
   background-color: rgba(23, 20, 31, 0.8);
 }

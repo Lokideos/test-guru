@@ -20,7 +20,7 @@ ru:
         confirmation_instructions: 'Не получили письма с подтверждением регистрации?'
 
   common:
-    show: 'Перейти'
+    show: 'Просмотреть'
     edit: 'Редактировать'
     back: 'Назад'
     logout: 'Выйти'
@@ -78,8 +78,8 @@ ru:
       test:
         destroy: 'Удалить'
       index:
-        header: 'Доступные Тесты'
-        new_test: 'Создать Новый Тест'
+        header: 'Тесты'
+        new_test: 'Создать Тест'
         title: 'Название'
         level: 'Сложность'
         questions_quantity: 'Вопросы'
@@ -89,10 +89,13 @@ ru:
         create_new_question: 'Создать Новый Вопрос'
         questions_body: 'Вопрос'
         actions: 'Действия'
+        title: 'Название: %{title}'
+        category: 'Категория: %{category}'
+        level: 'Сложность: %{level}'
       edit:
         header: 'Редактировать %{title}'
       new:
-        header: 'Создание Нового Теста'
+        header: 'Новый Тест'
 
     questions:
       question:

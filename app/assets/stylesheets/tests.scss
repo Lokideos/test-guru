@@ -39,3 +39,47 @@
   border-color: rgba(118, 178, 0, 0.5);
   cursor: pointer;
 }
+
+// Admin tests
+
+.all-tests .btn {
+  margin-left: 0;
+}
+
+.tests-table {
+  display: table;
+  width: 1000px;
+}
+
+.test-table ul {
+  display: table-row;
+}
+
+.tests-table li {
+  width: 150px;
+  height: 40px;
+  display: table-cell;
+  // border-bottom: 2px solid #392e5c;
+}
+
+.tests-table header {
+  display: table-header-group;
+}
+
+.tests-table .tests-table-content{
+  display: table-row-group;
+}
+
+.chosen-test a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.chosen-test a:hover {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.chosen-test a:active {
+  color: #000000;
+}
+

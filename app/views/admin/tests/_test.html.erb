@@ -1,13 +1,23 @@
-<tr>
-  <td><%= test.title %></td>
-  <td><%= test.level %></td>
-  <td><%= test.questions.count %></td>
-  <td><%= link_to t('common.show'), admin_test_path(test) %> |</td>
-  <td><%= link_to t('common.edit'), edit_admin_test_path(test) %> |</td>
-  <td>
-    <%= link_to t('.destroy'), 
-                admin_test_path(test),
-                method: :delete,
-                data: { confirm: t('data.messages.delete_confirmation') } %>  
-  </td>
-</tr>
+<ul>
+  <li><%= test.title %></li>
+  <li><%= test.level %></li>
+  <li><%= test.questions.count %></li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.show'), admin_test_path(test), method: :get, class: 'btn-default btn' %>
+    </div>    
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.edit'), edit_admin_test_path(test), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('.destroy'),
+                    admin_test_path(test),
+                    method: :delete,
+                    data: { confirm: t('data.messages.delete_confirmation') },
+                    class: 'btn-default btn' %>    
+    </div>
+  </li>
+</ul>

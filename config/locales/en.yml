@@ -106,21 +106,24 @@ en:
       test:
         destroy: 'Destroy'
       index:
-        header: 'Pick up test'
-        new_test: 'Create New Test'
+        header: 'Tests'
+        new_test: 'Create Test'
         title: 'Title'
         level: 'Level'
         questions_quantity: 'Questions'
         actions: 'Actions'
       show:
-        header: 'Test %{title}'
+        header: '%{title} test'
         create_new_question: 'Create New Question'
         questions_body: 'Question'
         actions: 'Actions'
+        title: 'Title: %{title}'
+        category: 'Category: %{category}'
+        level: 'Level: %{level}'
       edit:
         header: 'Edit  %{title}'
       new:
-        header: 'New Test Creation'
+        header: 'New Test'
 
     questions:
       question:

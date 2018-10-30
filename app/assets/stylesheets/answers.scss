@@ -1,0 +1,32 @@
+.answers-table {
+  display: table;
+}
+
+.answers-table-header {
+  display: table-caption;
+  caption-side: top;
+  text-align: center;
+}
+
+.answers-table ul {
+  display: table-row;
+}
+
+.answers-table li {
+  width: 150px;
+  height: 40px;
+  display: table-cell;
+  // border-bottom: 2px solid #392e5c;
+}
+
+.answers-table li:first-of-type {
+  width: 300px;
+}
+
+.answers-table header {
+  display: table-header-group;
+}
+
+.answers-table .answers-table-content{
+  display: table-row-group;
+}

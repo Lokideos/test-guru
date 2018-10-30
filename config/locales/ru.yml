@@ -86,7 +86,7 @@ ru:
         actions: 'Действия'
       show:
         header: 'Тест %{title}'
-        create_new_question: 'Создать Новый Вопрос'
+        create_new_question: 'Новый Вопрос'
         questions_body: 'Вопрос'
         actions: 'Действия'
         title: 'Название: %{title}'
@@ -103,9 +103,11 @@ ru:
         destroy: 'Удалить'
       show:
         answers: 'Ответы'
-        new_answer: 'Создать Новый Ответ'
+        new_answer: 'Новый Ответ'
+        body: 'Вопрос: %{body}'
+        answers_body: 'Ответ'
       new:
-        header: 'Создание Нового Вопроса'
+        header: 'Новый Вопрос'
 
     answers:
       answer:

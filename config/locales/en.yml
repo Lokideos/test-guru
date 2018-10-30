@@ -132,8 +132,10 @@ en:
       show:
         answers: 'Answers'
         new_answer: 'New Answer'
+        body: 'Question: %{body}'
+        answers_body: 'Answer'
       new:
-        header: 'Create New Question'
+        header: 'New Question'
 
     answers:
       answer:

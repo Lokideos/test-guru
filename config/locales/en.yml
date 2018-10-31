@@ -30,6 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  helper_methods:
+    questions:
+      create_question: 'New Question'
+      edit_question: "Edit %{body}"
+
   data:
     messages:
       delete_confirmation: 'Are you sure?'

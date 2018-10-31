@@ -1,4 +1,8 @@
 ru:
+  helper_methods:
+    questions:
+      create_question: 'Новый вопрос'
+      edit_question: "Редактирование %{body}"
   data:
     messages:
       delete_confirmation: 'Вы уверены?'

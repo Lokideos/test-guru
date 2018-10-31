@@ -34,6 +34,15 @@ en:
     questions:
       create_question: 'New Question'
       edit_question: "Edit %{body}"
+    tests:
+      levels:
+        very_easy: 'very easy'
+        easy: 'easy'
+        medium: 'medium'
+        hard: 'hard'
+        very_hard: 'very hard'
+        brutal: 'brutal'
+        impossible: 'impossible'
 
   data:
     messages:

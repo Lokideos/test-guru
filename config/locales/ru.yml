@@ -3,6 +3,16 @@ ru:
     questions:
       create_question: 'Новый вопрос'
       edit_question: "Редактирование %{body}"
+    tests:
+      levels:
+        very_easy: 'очень просто'
+        easy: 'просто'
+        medium: 'непросто'
+        hard: 'сложно'
+        very_hard: 'очень сложно'
+        brutal: 'брутально'
+        impossible: 'невозможно'
+        
   data:
     messages:
       delete_confirmation: 'Вы уверены?'

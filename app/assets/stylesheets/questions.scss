@@ -13,10 +13,13 @@
 }
 
 .questions-table li {
-  width: 150px;
+  min-width: 100px;
   height: 40px;
   display: table-cell;
-  // border-bottom: 2px solid #392e5c;
+}
+
+.questions-table-content ul:hover {
+  background-color: rgba(57, 35, 92, 0.2);
 }
 
 .questions-table li:first-of-type {

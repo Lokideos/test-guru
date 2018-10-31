@@ -20,7 +20,7 @@
                 <p>
                   <%= f.label :password %>
                   <% if @minimum_password_length %>
-                  <em>(<%= t('.min_characters_requirment', length: @minimum_password_length) %>)</em>
+                    <em>(<%= t('.min_characters_requirment', length: @minimum_password_length) %>)</em>
                   <% end %>
                   <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
                 </p>

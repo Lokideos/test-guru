@@ -12,14 +12,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= render 'shared/nav' %>
     
     <main class="container-fluid">
       <div class="container">
           <%= render 'shared/announcer' %>
-          <%= yield %>        
+
+          <%= yield %>
       </div>
     </main>
 

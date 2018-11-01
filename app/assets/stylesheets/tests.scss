@@ -46,46 +46,6 @@
   margin-left: 0;
 }
 
-.tests-table {
-  display: table;
-}
-
-.tests-table ul {
-  display: table-row;
-}
-
-.tests-table li {
-  min-width: 100px;
-  height: 40px;
-  display: table-cell;
-}
-
 .tests-table li:first-child {
   min-width: 200px;
 }
-
-.tests-table-content ul:hover {
-  background-color: rgba(57, 35, 92, 0.2);
-}
-
-.tests-table header {
-  display: table-header-group;
-}
-
-.tests-table .tests-table-content{
-  display: table-row-group;
-}
-
-.chosen-test a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.chosen-test a:hover {
-  color: rgba(255, 255, 255, 0.7)
-}
-
-.chosen-test a:active {
-  color: #000000;
-}
-

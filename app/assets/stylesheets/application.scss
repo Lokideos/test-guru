@@ -8,13 +8,17 @@
 @import 'questions';
 @import 'answers';
 
+.btn:focus {
+  box-shadow: none;
+}
+
 .btn.btn-default:focus {  
   box-shadow: none;
 }
   
 .btn-default {
   margin: 5px;
-  min-width: 100px;
+  min-width: 155px;
   background-color: #392e5c;
   color: #ffffff;
 }

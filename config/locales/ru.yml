@@ -142,6 +142,13 @@ ru:
       form:
         corret_flag: 'Корректный ответ'
 
+    gists:
+      index:
+        header: "Gist'ы"
+        question: 'Вопрос'
+        url: 'Ссылка'
+        user: 'Автор'
+
   tests:
     test:
       start: 'Пройти тест'

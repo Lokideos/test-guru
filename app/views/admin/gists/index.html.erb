@@ -1,0 +1,19 @@
+<section class="all-gists">
+  <div class="row">
+    <div class="col col-md-10">
+      <div class="gists-table">
+        <h1 class="gists-table-header"><%= t('.header') %></h1>
+        <header>
+          <ul>
+            <li><%= t('.question') %></li>
+            <li><%= t('.url') %></li>
+            <li><%= t('.user') %></li>
+          </ul>
+        </header>
+        <div class="gists-table-content">
+          <%= render @gists %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

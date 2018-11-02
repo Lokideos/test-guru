@@ -170,6 +170,13 @@ en:
       form:
         corret_flag: 'Correct'
 
+    gists:
+      index:
+        header: 'Gists'
+        question: 'Question'
+        url: 'URL'
+        user: 'author'
+
   tests:
     test:
       start: 'Start'

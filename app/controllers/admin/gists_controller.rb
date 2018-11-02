@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class GistsController < ApplicationController
+class Admin::GistsController < Admin::BaseController
   def index
     @gists = Gist.all
   end

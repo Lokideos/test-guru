@@ -44,6 +44,10 @@ en:
         brutal: 'brutal'
         impossible: 'impossible'
 
+  services:
+    gist:
+      question_title: "TestGuru question from %{test_title} test"
+
   data:
     messages:
       delete_confirmation: 'Are you sure?'
@@ -182,9 +186,13 @@ en:
       total_questions: 'Total Questions: %{count}'
       current_question: 'Current Question: %{number}'
       next_question: 'Next'
+      gist_question: 'Gist Question'
     result:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'
+    gist:
+      success: 'Gist was successfully created!'
+      failure: 'An error occured while saving gist'
 
   test_mailer:
     completed_test:

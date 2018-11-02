@@ -12,6 +12,10 @@ ru:
         very_hard: 'очень сложно'
         brutal: 'брутально'
         impossible: 'невозможно'
+
+  services:
+    gist:
+      question_title: "Вопрос TestGuru из теста %{test_title}"
         
   data:
     messages:
@@ -154,9 +158,13 @@ ru:
       total_questions: 'Количество вопросов в тесте: %{count}'
       current_question: 'Текущий вопрос: %{number}'
       next_question: 'Далее'
+      gist_question: 'В Gist'
     result:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'
+    gist:
+      success: 'Gist успешно сохранён!'
+      failure: 'Во время сохранения gist произошла ошибка'
 
   test_mailer:
     completed_test:

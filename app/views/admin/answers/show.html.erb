@@ -1,20 +1,41 @@
-<h1><%= t('.header') %></h1>
+<section class="chosen-answer">
+  <div class="row justify-content-center">
+    <div class="col col-md-6 mt-3">
+      <h2><%= @answer.question.body %></h2>
+    </div>
+  </div>
 
-<p>
-  <%= @answer.question.body %>
-</p>
+  <div class="row justify-content-center">
+    <div class="col col-md-6 mt-3">
+      <p><%= t('.body', body: @answer.body) %></p>
+      <p><%= t('.correct') %> <%= @answer.correct %></p>      
+    </div>
+  </div>
 
-<p>
-  <b><%= t('.answer_body') %>:</b>
-  <%= @answer.body %>
-</p>
+  <div class="row justify-content-center">
+    <div class="col-2 col-md-2 mt-3">
+      <div class="btn-default-container">
+        <%= button_to t('common.edit'), edit_admin_answer_path(@answer), method: :get, class: 'btn-default btn' %>
+      </div>
+    </div>
+  
+    <div class="col-2 col-md-2 mt-3">
+      <div class="btn-default-container">
+        <%= button_to t('admin.questions.question.destroy'),
+                      admin_question_path(@answer.question),
+                      method: :delete,
+                      data: { confirm: t('data.messages.delete_confirmation') },
+                      class: 'btn-default btn' %>    
+      </div>
+    </div>
+  </div>
 
-<p>
-  <b><%= t('.answer_correct') %>:</b>
-  <%= @answer.correct %>
-</p>
+  <div class="row justify-content-center">
+    <div class="col-2 col-md-2 mt-3">
+      <div class="btn-default-container">
+        <%= button_to t('common.back'), admin_question_path(@answer.question), method: :get, class: 'btn-default btn' %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <%= link_to t('common.edit'), edit_admin_answer_path(@answer) %>
-  <%= link_to t('common.back'), admin_question_path(@answer.question) %>
-</p>
+</section>

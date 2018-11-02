@@ -1,0 +1,39 @@
+.default-form .default-header {
+  margin: 20px;
+  text-align: center;
+}
+
+.default-form .card {
+  background-color: #392e5c;
+}
+
+.default-form a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.default-form a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.default-form a:active {
+  color: #000000;
+}
+
+.default-form .btn-default-container{  
+  text-align: center;
+}
+
+.default-form .btn-default {
+  min-width: 100px;
+  background-color: #17141f;
+  color: #ffffff;
+}
+
+.default-form .btn-default:hover {
+  background-color: rgba(23, 20, 31, 0.8);
+}
+
+.default-form .btn-default:active {
+  background-color: rgba(23, 20, 31, 0.8);
+}

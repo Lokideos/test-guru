@@ -1,9 +1,22 @@
-<li>
-  <%= answer.body %>
-  <%= link_to t('common.show'), admin_answer_path(answer) %> |
-  <%= link_to t('common.edit'), edit_admin_answer_path(answer) %> |
-  <%= link_to t('.destroy'),
+<ul>
+  <li><%= answer.body %></li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.show'), admin_answer_path(answer), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.edit'), edit_admin_answer_path(answer), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('.destroy'),
               admin_answer_path(answer),
               method: :delete,
-              data: { confirm: t('data.messages.delete_confirmation') } %>
-</li>
+              data: { confirm: t('data.messages.delete_confirmation') },
+              class: 'btn-default btn' %>    
+    </div>
+  </li>
+</ul>

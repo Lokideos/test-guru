@@ -1,0 +1,30 @@
+body {
+  background-color: #17141f;
+  color: white;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.navbar {
+  background-color: #392e5c;
+}
+
+.navbar .navbar-text a:hover {
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+}
+
+.navbar .navbar-text a:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer.page-footer {
+  height: 50px;
+  margin-top: -50px;
+}
+
+.alert {
+  padding: 0;
+  padding-top: 5px;
+  text-align: center;
+}

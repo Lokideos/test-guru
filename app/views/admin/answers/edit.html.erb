@@ -1,5 +1,18 @@
-<h1><%= t('.header') %></h1>
+<section class="default-form">
+  <div class="row justify-content-center">
+    <div class="col col-md-4">
+      <h2 class="default-header"><%= @answer.question.body %></h2>
+    </div>
+  </div>
 
-<%= render 'form', answer: @answer %>
+  <div class="row justify-content-center">
+    <div class="col col-md-6">
 
-<%= link_to t('common.back'), admin_question_path(@answer.question) %>
+      <%= render 'form', answer: @answer %>
+
+      <div class="mt-1">
+        <%= link_to t('common.back'), admin_question_path(@answer.question) %>
+      </div>
+    </div>
+  </div>
+</section>

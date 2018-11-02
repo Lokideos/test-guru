@@ -1,0 +1,68 @@
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn.btn-default:focus {  
+  box-shadow: none;
+}
+  
+.btn-default {
+  margin: 5px;
+  min-width: 155px;
+  background-color: #392e5c;
+  color: #ffffff;
+}
+
+.btn-default:hover {
+  background-color: rgba(57, 46, 92, 0.8);
+}
+
+.btn-default:active {
+  background-color: rgba(57, 46, 92, 0.4);
+}
+
+[class$="-table"]{
+  display: table;
+}
+
+[class$="-table-header"] {
+  display: table-caption;
+  caption-side: top;
+  text-align: center;
+}
+
+[class$="-table"] ul {
+  display: table-row;
+}
+
+[class$="-table"] li {
+  min-width: 100px;
+  height: 40px;
+  display: table-cell;
+  padding: 5px;
+}
+
+[class$="-table-content"] ul:hover {
+  background-color: rgba(57, 35, 92, 0.2);
+}
+
+[class$="-table"] header {
+  display: table-header-group;
+}
+
+[class$="-table"] [class$="-table-content"]{
+  display: table-row-group;
+}
+
+[class^="chosen-"] a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+[class^="chosen-"] a:hover {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+[class^="chosen-"] a:active {
+  color: #000000;
+}

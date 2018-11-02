@@ -30,15 +30,35 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  helper_methods:
+    questions:
+      create_question: 'New Question'
+      edit_question: "Edit %{body}"
+    tests:
+      levels:
+        very_easy: 'very easy'
+        easy: 'easy'
+        medium: 'medium'
+        hard: 'hard'
+        very_hard: 'very hard'
+        brutal: 'brutal'
+        impossible: 'impossible'
+
   data:
     messages:
       delete_confirmation: 'Are you sure?'
 
   devise:
+    sessions:
+      new:
+        login: 'The Guru Gate'
+        remember_flag: 'Remember me'
+        email_placeholder: 'Enter Email'
     registrations:
       new:
-        signup: 'Sign Up'
+        signup: 'Guru Registration'
         min_characters_requirment: '%{length} characters minimum'
+        email_placeholder: 'Enter Email'
     shared:
       links:
         forgot_password: 'Forgot your password?'
@@ -51,12 +71,7 @@ en:
     logout: 'Log Out'
     login: 'Log In'
     signup: 'Sign Up'
-
-  layouts:
-    header:
-      greetings: 'Welcome, %{email} Guru'
-    footer:
-      credits: 'Learning project in'
+    again: 'Try again'
 
   helpers:
     submit:
@@ -69,6 +84,8 @@ en:
       answer:
         create: 'Create Answer'
         update: 'Update Answer'
+      user:
+        create: 'Log In'
     label:
       test:
         title: 'Title'
@@ -83,6 +100,13 @@ en:
       prompt: 'Select Category'
 
   shared:
+    nav:
+      admin_panel: 'Admin Panel'
+      greetings: 'Welcome, %{email} Guru'
+    footer:
+      about: 'About'
+      author: 'Contact us'
+      credits: 'Learning project in'
     errors:
       header:
         one: "%{count} error detected"
@@ -96,21 +120,25 @@ en:
       test:
         destroy: 'Destroy'
       index:
-        header: 'All Tests'
-        new_test: 'Create New Test'
+        header: 'Tests'
+        new_test: 'Create Test'
         title: 'Title'
         level: 'Level'
         questions_quantity: 'Questions'
         actions: 'Actions'
       show:
-        header: 'Test %{title}'
+        header: '%{title} test'
         create_new_question: 'Create New Question'
         questions_body: 'Question'
         actions: 'Actions'
+        title: 'Title: %{title}'
+        category: 'Category: %{category}'
+        level: 'Level: %{level}'
+        questions: 'Questions'
       edit:
         header: 'Edit  %{title}'
       new:
-        header: 'New Test Creation'
+        header: 'New Test'
 
     questions:
       question:
@@ -118,37 +146,42 @@ en:
       show:
         answers: 'Answers'
         new_answer: 'New Answer'
+        body: 'Question: %{body}'
+        answers_body: 'Answer'
       new:
-        header: 'Create New Question'
+        header: 'New Question'
 
     answers:
       answer:
         destroy: 'Destroy'
       show:
         header: 'Question'
-        answer_body: 'Answer'
-        answer_correct: 'Correct'
+        body: 'Answer: %{body}'
+        correct: 'Correct: %{correct}'
       new:
         header: 'New Answer'
+        question_body: 'Question: %{body}'
       edit:
         header: 'Editing Answer'
+      form:
+        corret_flag: 'Correct'
 
   tests:
     test:
       start: 'Start'
-    index:
-      header: 'All Tests'
-      title: 'Title'
       level: 'Level'
       questions_quantity: 'Questions'
-      actions: 'Actions'
+    index:
+      header: 'Pick up Test'
+      level: 'Level'
+      questions_quantity: 'Questions'
 
   test_passages:
     show:
-      header: 'Passing the %{test_title} test'
+      header: '%{test_title} test'
       total_questions: 'Total Questions: %{count}'
       current_question: 'Current Question: %{number}'
-      next_question: 'Next Question'
+      next_question: 'Next'
     result:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'

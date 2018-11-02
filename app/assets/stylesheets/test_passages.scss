@@ -1,3 +1,87 @@
-// Place all the styles related to the test_passages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.test-passage .test-passage-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-passage .test-passage-grid .test-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.test-passage .test-passage-grid .test-title h1,
+.test-passage .test-passage-grid .test-title p {
+  font-weight: bold;
+}
+
+.test-passage .test-passage-grid .question-title {
+  margin-bottom: 40px;
+}
+
+.test-passage .test-passage-grid .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+}
+
+.test-passage .test-passage-grid .btn-test-passage {
+  align-self: center;
+}
+
+.test-passage .test-passage-grid .btn-test-passage .btn,
+.test-passage-result .back-link-grid .btn-test-passage .btn {
+  min-width: 100px;
+  background-color: #392e5c;
+  color: #ffffff;
+}
+
+.test-passage .test-passage-grid .btn-test-passage .btn:hover,
+.test-passage-result .back-link-grid .btn-test-passage .btn:hover {  
+  background-color: rgba(57, 46, 92, 0.8);
+}
+
+.test-passage .test-passage-grid .btn-test-passage .btn:active,
+.test-passage-result .back-link-grid .btn-test-passage .btn:active {
+  background-color: rgba(57, 46, 92, 0.4);
+}
+
+.test-passage-result .test-passage-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.test-passage-result .test-passage-grid a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.test-passage-result .test-passage-grid a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.test-passage-result .test-passage-grid a:active {
+  color: #000000;
+}
+
+.test-passage-result .test-passage-grid .icon-result {
+  margin-bottom: 30px;
+}
+
+.test-passage-result .test-passage-grid .back-link {
+  margin-top: 20px;
+}
+
+.test-passage-result .back-link-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.test-passage-result .back-link-grid .btn-test-passage {
+  margin: 10px;
+  margin-top: 20px;
+}

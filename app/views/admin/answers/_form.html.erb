@@ -1,15 +1,27 @@
-<%= form_with(model: [:admin, @question, @answer], local: true) do |form| %>
-  <%= render 'shared/errors', resource: @answer %>
+<div class="card">
+  <div class="card-body">
+    <%= form_with(model: [:admin, @question, @answer], local: true) do |form| %>
+      <div class="form-group">
+        <%= render 'shared/errors', resource: @answer %>
 
-  <p>
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :answer_body, rows: 7, cols: 60 %>
-  </p>
+        <p>
+          <%= form.label :body %>
+          <%= form.text_area :body, id: :answer_body, rows: 7, cols: 60, class: "form-control" %>
+        </p>
+      </div>
 
-  <p> 
-    <%= form.label :correct %>
-    <%= form.check_box :correct, id: :answer_correct %>
-  </p>
+      <div class="form-check">
+        <%= form.label :correct, class: 'form-check-label' do %>
+          <%= form.check_box :correct, class: 'form-check-input' %>
+            <%= t('.corret_flag') %>?
+        <% end %>              
+      </div>
 
-  <p><%= form.submit %></p>
-<% end %>
+      <div class="container btn-default-container">
+        <div class="mt-2">
+          <p><%= form.submit class: 'btn-default btn' %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

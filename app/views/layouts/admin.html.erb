@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8'>
     <title>Admin Panel | TestGuru</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='description' content='Create and pass variety of tests'>
+    <meta name='keywords' content='test guru social'>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= render 'layouts/header' %>
-
-    <main>
-      <%= render 'layouts/announcer' %>
-      <%= render 'admin/nav' %>
+    <%= render 'shared/nav' %>
+    
+    <main class="container-fluid">
       <div class="container">
+        <%= render 'shared/announcer' %>
+
         <%= yield %>
       </div>
     </main>
 
-    <%= render 'layouts/footer' %>
+    <%= render 'shared/footer' %>
   </body>
 </html>

@@ -1,16 +1,61 @@
-<h1><%= question_header(@question) %></h1>
+<section class="chosen-question">
+  <div class="row justify-content-center">
+    <div class="col col-md-6 mt-3">
+      <h2><%= @question.body %></h2>
+    </div>
+  </div>
 
-<%= render @question %>
+  <div class="row justify-content-center">
+    <div class="col-6 col-md-4 mt-3">
+      <p><%= t('.body', body: @question.body) %></p>
+    </div>
 
-<h2><%= t('.answers') %>:</h2>
+    <div class="col-6 col-md-4 mt-3">
+      <div class="btn-default-container">
+        <%= button_to t('common.edit'), edit_admin_question_path(@question), method: :get, class: 'btn-default btn' %>
+      </div>
+  
+      <div class="btn-default-container">
+        <%= button_to t('admin.questions.question.destroy'),
+                      admin_question_path(@question),
+                      method: :delete,
+                      data: { confirm: t('data.messages.delete_confirmation') },
+                      class: 'btn-default btn' %>    
+      </div>
+    </div>
+  </div>
 
-<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+  <div class="row justify-content-center">
+    <div class="col col-md-4 mt-3">
+      <div class="btn-default-container">
+        <%= button_to t('.new_answer'), new_admin_question_answer_path(@question), method: :get, class: 'btn-default btn' %>
+      </div>
+    </div>
+  </div>
 
-<ol>
-  <%= render @question.answers %>
-</ol>
+  <div class="mt-4">
+    <div class="row justify-content-center">
+      <div class="col col-md-10">
+        <div class="answers-table">
+          <h2 class="answers-table-header"><%= t('.answers') %></h2>
+          <header>
+            <ul>
+              <li><%= t('.answers_body') %></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </header>
 
-<p>
-  <%= link_to t('common.edit'), edit_admin_question_path(@question) %>
-  <%= link_to t('common.back'), admin_test_path(@question.test) %>
-</p>
+          <div class="answers-table-content">
+            <%= render @question.answers %>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <p><%= link_to t('common.back'), admin_test_path(@question.test) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

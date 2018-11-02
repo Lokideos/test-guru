@@ -1,20 +1,30 @@
-<%= form_with model: [:admin, @test], local: true do |form| %>
-  <%= render 'shared/errors', resource: @test %>
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: [:admin, @test], local: true do |form| %>
+      <div class="form-group">
+        <%= render 'shared/errors', resource: @test %>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title, id: :test_title %>
-  </p>
+        <p>
+          <%= form.label :category_id %>
+          <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: 'dropdown-menu' %>
+        </p>
 
-  <p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level, id: :test_level %>
-  </p>
+        <p>
+          <%= form.label :title %>
+          <%= form.text_field :title, id: :test_title, class: "form-control" %>
+        </p>
 
-  <p>
-    <%= form.label :category_id %><br>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p>
+        <p>
+          <%= form.label :level %>
+          <%= form.number_field :level, id: :test_level, class: "form-control" %>
+        </p>
+      </div>
 
-  <p><%= form.submit %></p>
-<% end %>
+      <div class="container btn-default-container">
+        <div class="mt-2">
+          <%= form.submit class: "btn-default btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

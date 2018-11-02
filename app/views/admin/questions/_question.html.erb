@@ -1,10 +1,22 @@
-<tr>
-  <th><%= question.body %></th>
-  <th><%= link_to t('common.show'), admin_question_path(question) %> |</th>
-  <th><%= link_to t('common.edit'), edit_admin_question_path(question) %> |</th>
-  <th><%= link_to t('.destroy'), 
-                  admin_question_path(question),
-                  method: :delete,
-                  data: { confirm: t('data.messages.delete_confirmation') } %>
-  </th>
-</tr>
+<ul>
+  <li><%= question.body %></li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.show'), admin_question_path(question), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.edit'), edit_admin_question_path(question), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('.destroy'),
+              admin_question_path(question),
+              method: :delete,
+              data: { confirm: t('data.messages.delete_confirmation') },
+              class: 'btn-default btn' %>    
+    </div>
+  </li>
+</ul>

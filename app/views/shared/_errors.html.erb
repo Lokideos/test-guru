@@ -2,10 +2,10 @@
   <div>
     <h2><%= t('.header', count: resource.errors.count) %>:</h2>
 
-    <ul>
       <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <%= content_tag :div, class: "alert alert-danger" do %>
+          <%= content_tag(:p, message) %>
+        <% end %>
       <% end %>
-    </ul>
   </div>
 <% end %>

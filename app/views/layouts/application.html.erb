@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8'>    
     <title>TestGuru</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='description' content='Create and pass variety of tests'>
+    <meta name='keywords' content='test guru social'>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,16 +14,15 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-
-    <main>
-      <%= render 'layouts/announcer' %>
-
+    <%= render 'shared/nav' %>
+    
+    <main class="container-fluid">
       <div class="container">
-        <%= yield %>
+          <%= render 'shared/announcer' %>
+          <%= yield %>        
       </div>
     </main>
 
-    <%= render 'layouts/footer' %>
+    <%= render 'shared/footer' %>    
   </body>
 </html>

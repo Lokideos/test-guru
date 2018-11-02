@@ -1,0 +1,36 @@
+.about-info-area .container .headline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-info-area .container .description {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-info-area a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.about-info-area a:hover{
+  color: rgba(255,255,255,0.7);
+}
+
+.about-info-area a:active{
+  color: #000000;
+}
+
+.about-info-area .container .hidden {
+  display: flex;
+  justify-content: center;
+}
+
+.about-info-area .container .hidden .monika {
+  color: transparent;
+}
+
+.about-info-area .container .hidden .monika:hover {
+  color: #000000;
+}

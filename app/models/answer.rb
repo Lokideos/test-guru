@@ -16,7 +16,7 @@ class Answer < ApplicationRecord
   private
 
   def validate_answers_quantity_for_question_max
-    errors.add(:question) if question.answers.size >= MAX_ANSWERS
+    errors.add(:question) if question.answers.size > MAX_ANSWERS
   end
 
   def validate_answers_quantity_for_question_empty

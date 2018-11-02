@@ -130,6 +130,7 @@ en:
         level: 'Level'
         questions_quantity: 'Questions'
         actions: 'Actions'
+        show_gists: 'Gists'
       show:
         header: '%{title} test'
         create_new_question: 'Create New Question'

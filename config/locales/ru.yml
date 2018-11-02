@@ -102,6 +102,7 @@ ru:
         level: 'Сложность'
         questions_quantity: 'Вопросы'
         actions: 'Действия'
+        show_gists: "Gists'ы"
       show:
         header: 'Тест %{title}'
         create_new_question: 'Новый Вопрос'

@@ -22,7 +22,7 @@ class TestPassagesController < ApplicationController
     result = GistQuestionService.new(@test_passage.current_question).call
 
     flash_options = if result
-                      { notice: t('.success') }
+                      { notice: t('.success', url: result.html_url) }
                     else
                       { alert: t('.failure') }
                     end

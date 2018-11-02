@@ -191,7 +191,7 @@ en:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'
     gist:
-      success: 'Gist was successfully created!'
+      success: 'Gist was successfully created! Link: %{url}'
       failure: 'An error occured while saving gist'
 
   test_mailer:

@@ -45,10 +45,6 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
 
-# NETWORKING
-
-gem 'faraday'
-
 # SECURITY ISSUES
 
 gem 'loofah', '>= 2.2.3'

@@ -245,7 +245,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.0)
   dotenv-rails
-  faraday
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener

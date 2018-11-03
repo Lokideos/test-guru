@@ -8,7 +8,11 @@ class GistQuestionService
   end
 
   def call
-    @client.post '/gists', gist_params.to_json
+    @client.create_gist(gist_params.to_json)
+  end
+
+  def call_success?
+    @client.last_response.status == 201
   end
 
   private

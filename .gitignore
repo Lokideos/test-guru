@@ -33,5 +33,8 @@
 # Ignore pre-commit hook, located in this directory
 /rubocop_pre_commit.rb
 
+# Ignore access_tokens in ENV
+/.env
+
 # I would usually put .rubocop.yml here, but will leave it here, beacuse it's
 # a lerning project

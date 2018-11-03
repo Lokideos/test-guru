@@ -12,7 +12,7 @@ class Gist < ApplicationRecord
   validates :url, presence: true
   validates :url, format: { with: URL_FORMAT }
 
-  def truncate_url(size)
+  def hash(size)
     url[size..-1]
   end
 end

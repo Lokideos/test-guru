@@ -7,8 +7,4 @@ class Question < ApplicationRecord
   belongs_to :test
 
   validates :body, presence: true
-
-  def short_body(size)
-    "#{body[0..size]}..."
-  end
 end

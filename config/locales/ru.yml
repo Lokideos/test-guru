@@ -12,6 +12,9 @@ ru:
         very_hard: 'очень сложно'
         brutal: 'брутально'
         impossible: 'невозможно'
+    answers:
+      correct: 'Правильный ответ'
+      incorrect: 'Неправильный ответ'
 
   services:
     gist:

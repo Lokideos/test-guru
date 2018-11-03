@@ -43,6 +43,9 @@ en:
         very_hard: 'very hard'
         brutal: 'brutal'
         impossible: 'impossible'
+    answers:
+      correct: 'Correct answer'
+      incorrect: 'Incorrect answer'
 
   services:
     gist:
@@ -162,7 +165,7 @@ en:
       show:
         header: 'Question'
         body: 'Answer: %{body}'
-        correct: 'Correct: %{correct}'
+        correct: 'Correct:'
       new:
         header: 'New Answer'
         question_body: 'Question: %{body}'

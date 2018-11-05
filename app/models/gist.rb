@@ -5,8 +5,4 @@ class Gist < ApplicationRecord
   belongs_to :question
 
   validates :url, presence: true
-
-  def hash(size)
-    url[size..-1]
-  end
 end

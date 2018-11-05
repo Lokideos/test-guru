@@ -1,5 +1,5 @@
 <ul>
   <li><%= link_to truncate(gist.question.body, length: 25), gist.url, target: '_blank' %></li>
-  <li><%= link_to gist.hash(24), gist.url, target: '_blank' %></li>
+  <li><%= link_to gist.url.slice(24, gist.url.length), gist.url, target: '_blank' %></li>
   <li><%= gist.user.email %></li>
 </ul>

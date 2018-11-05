@@ -1,5 +1,8 @@
 ru:
   helper_methods:
+    application:
+      flash_message:
+        gist_created: 'Gist создан'
     questions:
       create_question: 'Новый вопрос'
       edit_question: "Редактирование %{body}"
@@ -174,7 +177,6 @@ ru:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'
     gist:
-      success: 'Gist успешно сохранён! Ссылка на gist: %{url}'
       failure: 'Во время сохранения gist произошла ошибка'
 
   test_mailer:

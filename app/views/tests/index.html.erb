@@ -1,6 +1,10 @@
 <section class="tests-pickup">
   <h1 class="tests-headline"><%= t('.header')%></h1>
 
+  <div class="row justify-content-center">
+    <button type="button" class="btn-default btn sort-tests sort-tests-trigger">Sorting</button>
+  </div>
+
   <div class="tests-grid">  
     <%= render @tests %>  
   </div>

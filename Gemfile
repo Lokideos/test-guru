@@ -44,6 +44,7 @@ gem 'rails-i18n', '~> 5.0.0'
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
+gem 'octicons_helper'
 
 # SECURITY ISSUES
 

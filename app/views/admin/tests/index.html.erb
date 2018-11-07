@@ -19,7 +19,10 @@
       <div class="tests-table">
         <header>
           <ul>
-            <li><%= t('.title') %></li>
+            <li class="sort-by-title pointer"><%= t('.title') %>
+              <%= octicon 'arrow-up', class: 'text-success hide' %>
+              <%= octicon 'arrow-down', class: 'text-success hide' %>
+            </li>
             <li><%= t('.level') %></li>
             <li><%= t('.questions_quantity') %></li>
             <li></li>

@@ -5,7 +5,7 @@ document.addEventListener('turbolinks:load', function() {
 });
 
 function sortRowsByTitle() {
-  var table = document.querySelector('.tests-table')
+  var table = document.querySelector('div[class$="-table"]')
 
   // NodeList
   // https://developer.mozilla.org/en-US/docs/Web/API/NodeList
@@ -33,9 +33,14 @@ function sortRowsByTitle() {
   sortedTable.classList.add('tests-table')
   sortedTable.appendChild(rows[0])
 
+  var tableContent = document.createElement('div')
+  tableContent.classList.add('table-content')  
+  
   for (var i = 0; i < sortedRows.length; i++) {
-    sortedTable.appendChild(sortedRows[i])
+    tableContent.appendChild(sortedRows[i])
   }
+
+  sortedTable.appendChild(tableContent)
 
   table.parentNode.replaceChild(sortedTable, table)
 }

@@ -178,6 +178,7 @@ ru:
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'
     gist:
       failure: 'Во время сохранения gist произошла ошибка'
+      error_reason: 'Статус ошибки'
 
   test_mailer:
     completed_test:

@@ -206,6 +206,7 @@ en:
       test_failed: 'You have failed %{title} test! Try again!'
     gist:
       failure: 'An error occured while saving gist'
+      error_reason: 'Error status'
 
   test_mailer:
     completed_test:

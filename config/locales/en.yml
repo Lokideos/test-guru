@@ -193,6 +193,7 @@ en:
       header: 'Pick up Test'
       level: 'Level'
       questions_quantity: 'Questions'
+      sorting: 'Sorting'
 
   test_passages:
     show:

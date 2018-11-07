@@ -165,6 +165,7 @@ ru:
       header: 'Выберите Тест'
       level: 'Сложность'
       questions_quantity: 'Вопросы'
+      sorting: 'Сортировать'
 
   test_passages:
     show:

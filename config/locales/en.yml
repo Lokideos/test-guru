@@ -31,6 +31,9 @@
 
 en:
   helper_methods:
+    application:
+      flash_message:
+        gist_created: 'Gist created'
     questions:
       create_question: 'New Question'
       edit_question: "Edit %{body}"
@@ -43,6 +46,13 @@ en:
         very_hard: 'very hard'
         brutal: 'brutal'
         impossible: 'impossible'
+    answers:
+      correct: 'Correct answer'
+      incorrect: 'Incorrect answer'
+
+  services:
+    gist:
+      question_title: "TestGuru question from %{test_title} test"
 
   data:
     messages:
@@ -126,6 +136,7 @@ en:
         level: 'Level'
         questions_quantity: 'Questions'
         actions: 'Actions'
+        show_gists: 'Gists'
       show:
         header: '%{title} test'
         create_new_question: 'Create New Question'
@@ -157,7 +168,7 @@ en:
       show:
         header: 'Question'
         body: 'Answer: %{body}'
-        correct: 'Correct: %{correct}'
+        correct: 'Correct:'
       new:
         header: 'New Answer'
         question_body: 'Question: %{body}'
@@ -165,6 +176,13 @@ en:
         header: 'Editing Answer'
       form:
         corret_flag: 'Correct'
+
+    gists:
+      index:
+        header: 'Gists'
+        question: 'Question'
+        url: 'URL'
+        user: 'author'
 
   tests:
     test:
@@ -182,9 +200,12 @@ en:
       total_questions: 'Total Questions: %{count}'
       current_question: 'Current Question: %{number}'
       next_question: 'Next'
+      gist_question: 'Gist Question'
     result:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'
+    gist:
+      failure: 'An error occured while saving gist'
 
   test_mailer:
     completed_test:

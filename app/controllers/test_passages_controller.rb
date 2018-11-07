@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TestPassagesController < ApplicationController
-  before_action :set_test_passage, only: %i[show update result]
+  before_action :set_test_passage, only: %i[show update result gist]
 
   def show; end
 
@@ -16,6 +16,21 @@ class TestPassagesController < ApplicationController
     else
       render :show
     end
+  end
+
+  def gist
+    service = GistQuestionService.new(@test_passage.current_question)
+    git_response = service.call
+
+    if service.call_success?
+      current_user.gists.create(question: @test_passage.current_question,
+                                url: git_response.html_url)
+      flash[:gist_create] = git_response.html_url
+    else
+      flash[:alert] = t('.failure')
+    end
+
+    redirect_to @test_passage
   end
 
   private

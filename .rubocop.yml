@@ -3,8 +3,7 @@ AllCops:
   StyleGuideCopsOnly: false
   Exclude:
     - '**/bin/**/*'
-    - '**/config/**/*'
-    - '**/lib/**/*'
+    - '**/config/**/*'    
     - '**/log/**/*'
     - '**/storage/**/*'
     - '**/tmp/**/*'

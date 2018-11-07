@@ -1,5 +1,8 @@
 ru:
   helper_methods:
+    application:
+      flash_message:
+        gist_created: 'Gist создан'
     questions:
       create_question: 'Новый вопрос'
       edit_question: "Редактирование %{body}"
@@ -12,6 +15,13 @@ ru:
         very_hard: 'очень сложно'
         brutal: 'брутально'
         impossible: 'невозможно'
+    answers:
+      correct: 'Правильный ответ'
+      incorrect: 'Неправильный ответ'
+
+  services:
+    gist:
+      question_title: "Вопрос TestGuru из теста %{test_title}"
         
   data:
     messages:
@@ -98,6 +108,7 @@ ru:
         level: 'Сложность'
         questions_quantity: 'Вопросы'
         actions: 'Действия'
+        show_gists: "Gists'ы"
       show:
         header: 'Тест %{title}'
         create_new_question: 'Новый Вопрос'
@@ -138,6 +149,13 @@ ru:
       form:
         corret_flag: 'Корректный ответ'
 
+    gists:
+      index:
+        header: "Gist'ы"
+        question: 'Вопрос'
+        url: 'Ссылка'
+        user: 'Автор'
+
   tests:
     test:
       start: 'Пройти тест'
@@ -154,9 +172,12 @@ ru:
       total_questions: 'Количество вопросов в тесте: %{count}'
       current_question: 'Текущий вопрос: %{number}'
       next_question: 'Далее'
+      gist_question: 'В Gist'
     result:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'
+    gist:
+      failure: 'Во время сохранения gist произошла ошибка'
 
   test_mailer:
     completed_test:

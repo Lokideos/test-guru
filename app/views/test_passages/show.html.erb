@@ -15,16 +15,23 @@
       <div class="form-group">
         <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
           
-          <p>
-            <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-            <%= b.label %>
-          </p>
+        <p>
+          <%= b.check_box id: "answer_ids_#{b.object.id}" %>
+          <%= b.label %>
+        </p>
           
-        <% end %>
+        <% end %>        
+
         <div class="btn-test-passage">
           <%= form.submit t('.next_question'), class: "btn" %>
         </div>
       </div>
     <% end %>
+
+    
+    
+    <div class="btn-test-passage">
+      <%= button_to t('.gist_question'), gist_test_passage_path(@test_passage), class: 'btn btn-default', type: 'button', method: :post %>
+    </div>
   </div>
 </section>

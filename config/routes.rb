@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 Rails.application.routes.draw do
   get '/:lang' => 'tests#index'
   root to: 'tests#index'
@@ -23,6 +24,8 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :tests do
+        patch :update_inline, on: :member
+
         resources :questions, shallow: true, except: [:index] do
           resources :answers, shallow: true, except: [:index]
         end
@@ -32,3 +35,4 @@ Rails.application.routes.draw do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

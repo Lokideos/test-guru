@@ -20,15 +20,7 @@ class TestPassagesController < ApplicationController
 
   def gist
     service = GistQuestionService.new(@test_passage.current_question)
-    git_response = service.call
-
-    if service.call_success?
-      current_user.gists.create(question: @test_passage.current_question,
-                                url: git_response.html_url)
-      flash[:gist_create] = git_response.html_url
-    else
-      flash[:alert] = t('.failure')
-    end
+    make_gist(service)
 
     redirect_to @test_passage
   end
@@ -37,5 +29,15 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def make_gist(service)
+    git_response = service.call
+
+    current_user.gists.create(question: @test_passage.current_question,
+                              url: git_response.html_url)
+    flash[:gist_create] = git_response.html_url
+  rescue StandardError => e
+    flash[:alert] = "#{t('.failure')}. #{t('.error_reason')}: #{e.response_status}"
   end
 end

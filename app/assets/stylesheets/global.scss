@@ -42,7 +42,7 @@
   padding: 5px;
 }
 
-[class$="-table-content"] ul:hover {
+[class$="table-content"] ul:hover {
   background-color: rgba(57, 35, 92, 0.2);
 }
 
@@ -50,7 +50,7 @@
   display: table-header-group;
 }
 
-[class$="-table"] [class$="-table-content"]{
+[class$="-table"] [class$="table-content"]{
   display: table-row-group;
 }
 
@@ -65,4 +65,12 @@
 
 [class^="chosen-"] a:active {
   color: #000000;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
 }

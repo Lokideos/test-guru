@@ -17,18 +17,32 @@
                   <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('.email_placeholder') %>
                 </p>
 
-                <p>
-                  <%= f.label :password %>
-                  <% if @minimum_password_length %>
-                    <em>(<%= t('.min_characters_requirment', length: @minimum_password_length) %>)</em>
-                  <% end %>
-                  <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-                </p>
+                <div class="row">
+                  <div class="col-10">
+                    <p>
+                      <%= f.label :password %>
+                      <% if @minimum_password_length %>
+                        <em>(<%= t('.min_characters_requirment', length: @minimum_password_length) %>)</em>
+                      <% end %>
+                      <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+                    </p>
+                  </div>
+                </div>
 
-                <p>
-                  <%= f.label :password_confirmation %>
-                  <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-                </p>
+                <div class="row">
+                  <div class="col">
+                    <%= f.label :password_confirmation %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-10">
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+                  </div>
+                  <div class="col-2">
+                    <%= octicon 'x', height: 35, class: 'password-incorrect hide' %>
+                    <%= octicon 'check', height: 35, class: 'password-correct hide' %>
+                  </div>
+                </div>
               </div>
 
               <div class="container btn-default-container">

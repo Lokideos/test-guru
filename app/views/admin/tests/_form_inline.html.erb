@@ -8,6 +8,10 @@
               # html: { style: 'display: none' },
               
               data: { test_id: test.id } do |form| %>
-  <%= form.text_field :title, class: 'form-control mr-2' %>
-  <%= form.submit t('common.submit'), class: 'btn btn-primary' %>
+  <div class="col-6">
+    <%= form.text_field :title, class: 'form-control mr-2 col-12' %>
+  </div>  
+  <div class="col-6">
+    <%= form.submit t('common.submit'), class: 'btn-default btn' %>
+  </div>
 <% end %>

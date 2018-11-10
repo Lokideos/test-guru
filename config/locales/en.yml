@@ -83,6 +83,7 @@ en:
     signup: 'Sign Up'
     again: 'Try again'
     submit: 'Submit'
+    cancel: 'Cancel'
 
   helpers:
     submit:

@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # LOCALIZATION
 
 gem 'rails-i18n', '~> 5.0.0'
+gem 'i18n-js', '~> 3.0.0'
 
 # UI
 

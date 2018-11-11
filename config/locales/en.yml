@@ -82,6 +82,8 @@ en:
     login: 'Log In'
     signup: 'Sign Up'
     again: 'Try again'
+    submit: 'Submit'
+    cancel: 'Cancel'
 
   helpers:
     submit:

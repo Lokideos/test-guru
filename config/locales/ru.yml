@@ -51,6 +51,8 @@ ru:
     login: 'Войти'
     signup: 'Зарегистрироваться'
     again: 'Еще раз'
+    submit: 'Сохранить'
+    cancel: 'Отмена'
 
   helpers:
     submit:

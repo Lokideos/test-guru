@@ -1,5 +1,8 @@
 <ul>
-  <li><%= test.title %></li>
+  <li>
+    <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>  
+  </li>
   <li><%= test.level %></li>
   <li><%= test.questions.count %></li>
   <li>
@@ -8,7 +11,11 @@
     </div>
   <li>
     <div class="btn-default-container">
-      <%= button_to t('common.edit'), edit_admin_test_path(test), method: :get, class: 'btn-default btn' %>
+      <%= button_to t('common.edit'),
+                    edit_admin_test_path(test), 
+                    method: :get,
+                    data: { test_id: test.id },
+                    class: 'btn-default btn form-inline-link' %>
     </div>
   </li>
   <li>

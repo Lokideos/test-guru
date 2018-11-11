@@ -2,9 +2,17 @@
   <div class="test-passage-grid">
     <div class="test-title">
       <h1><%= t('.header', test_title: @test_passage.test.title ) %></h1>
-      <p>
-        <%= @test_passage.current_question_number %> / <%= @test_passage.test.questions.count %>
-      </p>
+
+      <%= content_tag :div, class: 'test-progress-bar' do %>
+        <%= content_tag :div, class: 'test-current-progress' do %>
+        <% end %>
+      <% end %>
+
+      <%= content_tag :div, 
+                      class: 'test-progress-percent-counter',
+                      data: { test_passage_id: @test_passage.id } do %>
+        <%= 100 * (@test_passage.current_question_number.to_i - 1) / @test_passage.test.questions.count.to_i %>%
+      <% end %>
     </div>
 
     <div class="question-title">

@@ -16,4 +16,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require i18n/translations
 //= require_tree .
+
+var current_locale = (document.cookie.match(new RegExp("locale="))).input.substring(7);
+I18n.locale = current_locale;

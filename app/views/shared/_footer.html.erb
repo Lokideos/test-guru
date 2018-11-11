@@ -2,7 +2,8 @@
   <div class="navbar fixed-bottom navbar-dark">
     <span class="navbar-text">        
       <%= link_to t('.about'), "/#{I18n.locale}/about" %> |
-      <%= link_to t('.author'), "/#{I18n.locale}/author" %>        
+      <%= link_to t('.author'), "/#{I18n.locale}/author" %> |
+      <%= link_to t('.contact_us'), new_feedback_path %>
     </span>
     <span class="navbar-text">        
       &copy <%= current_year %> Loki <%= github_link('Lokideos', 'test-guru') %> |

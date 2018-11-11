@@ -2,10 +2,9 @@
 
 class FeedbacksMailer < ApplicationMailer
   def ready_feedback(feedback, admins)
-    @feedback = feedback
-
     admins.each do |admin|
       @user = admin
+      @feedback = feedback
 
       mail to: @user.email
     end

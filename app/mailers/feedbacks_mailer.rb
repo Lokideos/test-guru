@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
 class FeedbacksMailer < ApplicationMailer
-  def ready_feedback(feedback, admins)
-    admins.each do |admin|
-      @user = admin
-      @feedback = feedback
+  def ready_feedback(feedback, user)
+    @user = user
+    @feedback = feedback
 
-      mail to: @user.email
-    end
+    mail to: @user.email
   end
 end

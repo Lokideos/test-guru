@@ -5,6 +5,7 @@ en:
       test_passage: 'Test Passage'
       question: 'Question'
       answer: 'Answer'
+      feedback: 'Feedback'
 
     attributes:
       test:
@@ -18,6 +19,8 @@ en:
       answer:
         body: 'Answer'
         correct: 'Correct'
+      feedback:
+        text: 'Text'
 
     errors:
       messages:

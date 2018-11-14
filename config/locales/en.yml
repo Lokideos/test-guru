@@ -117,8 +117,9 @@ en:
       greetings: 'Welcome, %{email} Guru'
     footer:
       about: 'About'
-      author: 'Contact us'
+      author: 'Author'
       credits: 'Learning project in'
+      contact_us: 'Contact Us'
     errors:
       header:
         one: "%{count} error detected"
@@ -210,6 +211,12 @@ en:
     gist:
       failure: 'An error occured while saving gist'
       error_reason: 'Error status'
+
+  feedbacks:
+    new:
+      header: 'New Feedback'
+    create:
+      success: 'Feedback was successfully submitted.'
 
   test_mailer:
     completed_test:

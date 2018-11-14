@@ -7,10 +7,6 @@ document.addEventListener('turbolinks:load', function() {
     }
   }
 
-  // for jQuery realization
-  
-  // $('.form-inline-link').on('click', formInlineLinkHandler)
-
   var errors = document.querySelector('.resource-errors')
 
   if (errors) {
@@ -42,17 +38,4 @@ function formInlineHandler(testId) {
       link.value = I18n.t('common.edit')
     }
   }
-  
-  // for jQuery realization
-
-  // var $testTitle = $('.test-title[data-test-id="' + testId + '"]')
-  // var $formInline = $('.form-inline[data-test-id="' + testId + '"]')
-  // $formInline.toogle() - toogle() was removed
-  // $testTitle.toogle()  - toogle() was removed
-
-  // if ($formInline.is(':visible')) {
-  //   link.value = 'Edit' }
-  // } else {
-  //   link.value = 'Cancel'
-  // }
 }

@@ -16,7 +16,7 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: 'Test', foreign_key: 'author_id'
   has_many :gists
 
-  EMAIL_FORMAT = /\A[a-zA-Z]*[@]{1}[a-z]*[.]{1}[a-z]{2,3}\z/
+  EMAIL_FORMAT = /\A[a-zA-Z0-9]*[@]{1}[a-z]*[.]{1}[a-z]{2,3}\z/
 
   validates :email, presence: true, uniqueness: true,
                     format: { with: EMAIL_FORMAT, message: 'must be valid email address' }

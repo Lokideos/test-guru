@@ -86,8 +86,9 @@ ru:
       greetings: 'Добро пожаловать, %{email} Гуру'
     footer:
       about: 'О проекте'
-      author: 'Свяжитесь с нами'
+      author: 'Об Авторе'
       credits: 'Учебный проект в онлайн-школе'
+      contact_us: 'Свяжитесь с нами'
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -182,6 +183,12 @@ ru:
     gist:
       failure: 'Во время сохранения gist произошла ошибка'
       error_reason: 'Статус ошибки'
+
+  feedbacks:
+    new:
+      header: 'Новый Отзыв'
+    create:
+      success: 'Отзыв был успешно отправлен.'
 
   test_mailer:
     completed_test:

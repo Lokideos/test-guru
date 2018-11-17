@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <%= form_with(model: [:admin, @badge], local: true) do |form| %>
+      <div class="form-group">
+        <%= render 'shared/errors', resource: @badge %>
+
+        <p>
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :badge_name, class: "form-control" %>
+        </p>
+
+        <p>
+          <%= form.label :icon_path %>
+          <%= form.text_field :icon_path, id: :badge_icon_path, class: "form-control" %>
+        </p>
+      </div>
+
+      <div class="container btn-default-container">
+        <div class="mt-2">
+          <p><%= form.submit class: 'btn-default btn' %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

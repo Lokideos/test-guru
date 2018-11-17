@@ -6,6 +6,7 @@ en:
       question: 'Question'
       answer: 'Answer'
       feedback: 'Feedback'
+      badge: 'Badge'
 
     attributes:
       test:
@@ -21,6 +22,9 @@ en:
         correct: 'Correct'
       feedback:
         text: 'Text'
+      badge:
+        name: 'Name'
+        icon_path: 'Path to icon'
 
     errors:
       messages:

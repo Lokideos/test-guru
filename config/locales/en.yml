@@ -187,6 +187,20 @@ en:
         url: 'URL'
         user: 'author'
 
+    badges:
+      badge:
+        destroy: 'Destroy'
+      index:
+        header: 'Badges'
+        name: 'Name'
+        icon_path: 'Icon'
+        new_badge: 'New Badge'
+      show:
+        name: 'Badge name: %{name}'
+        icon_path: 'Path to icon'
+      new:
+        header: 'New Badge'
+
   tests:
     test:
       start: 'Start'

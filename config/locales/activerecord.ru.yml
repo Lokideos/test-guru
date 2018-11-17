@@ -6,6 +6,7 @@ ru:
       question: 'Вопрос'
       answer: 'Ответ'
       feedback: 'Отзыв'
+      badge: 'Бэйдж'
 
     attributes:
       test:
@@ -21,6 +22,9 @@ ru:
         correct: 'Правильность'
       feedback:
         text: 'Текст'
+      badge:
+        name: 'Название'
+        icon_path: 'Путь к изображению'
 
 
     errors:

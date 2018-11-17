@@ -82,4 +82,5 @@ Answer.create([{ body: 'Correct Answer to ruby Metaprogramming question',
                { body: 'Answer to Unity assets creation through 3dmax', question: questions[11] }])
 
 Badge.create([{ name: 'Finishing Badge',
-                icon_path: 'path_to_icon.jpg' }])
+                icon_path: 'path_to_icon.jpg',
+                acquisition_type: 'All tests of category' }])

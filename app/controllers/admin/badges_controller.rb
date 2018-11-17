@@ -42,7 +42,7 @@ class Admin::BadgesController < Admin::BaseController
   private
 
   def badge_params
-    params.require(:badge).permit(:name, :icon_path)
+    params.require(:badge).permit(:name, :icon_path, :acquisition_type, :acquisition_options)
   end
 
   def find_badge

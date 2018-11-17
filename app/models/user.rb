@@ -15,6 +15,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test', foreign_key: 'author_id'
   has_many :gists
+  has_many :badge_acquisitions
+  has_many :badges, through: :badge_acquisitions
 
   EMAIL_FORMAT = /\A[a-zA-Z0-9]*[@]{1}[a-z]*[.]{1}[a-z]{2,3}\z/
 

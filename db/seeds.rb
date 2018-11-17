@@ -80,3 +80,6 @@ Answer.create([{ body: 'Correct Answer to ruby Metaprogramming question',
                { body: 'Answer to Unity project structure question', question: questions[9] },
                { body: 'Answer to Unity reactive programming paradigm', question: questions[10] },
                { body: 'Answer to Unity assets creation through 3dmax', question: questions[11] }])
+
+Badge.create([{ name: 'Finishing Badge',
+                icon_path: 'path_to_icon.jpg' }])

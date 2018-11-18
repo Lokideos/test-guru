@@ -3,8 +3,9 @@
 class Badge < ApplicationRecord
   has_many :badge_acquisitions
   has_many :users, through: :badge_acquisitions
+  belongs_to :badge_acquisition_rule
 
-  validates :name, :icon_path, :acquisition_type, presence: true
+  validates :name, :icon_path, presence: true
 
   # rubocop:disable Metrics/AbcSize
   # rubocop:disable Metrics/MethodLength
@@ -12,23 +13,24 @@ class Badge < ApplicationRecord
     badges = []
 
     if all_tests_of_category_done?(test_passage.test.category.title, test_passage.user)
-      Badge.where(acquisition_type: 'category',
-                  acquisition_options: test_passage.test.category.title).each do |badge|
-        badges << badge
-      end
+      badges.push(
+        BadgeAcquisitionRule.find_by(acquisition_type: 'category',
+                                     acquisition_options: test_passage.test.category.title).badges
+      )
     end
 
     if first_try_success?(test_passage.test, test_passage.user)
-      Badge.where(acquisition_type: 'first_try').each do |badge|
-        badges << badge
-      end
+      badges.push(
+        BadgeAcquisitionRule.find_by(acquisition_type: 'first_try').badges
+      )
+
     end
 
     if all_tests_of_level_done?(test_passage.test.level, test_passage.user)
-      Badge.where(acquisition_type: 'level',
-                  acquisition_options: test_passage.test.level).each do |badge|
-        badges << badge
-      end
+      badges.push(
+        BadgeAcquisitionRule.find_by(acquisition_type: 'level',
+                                     acquisition_options: test_passage.test.level).badges
+      )
     end
 
     badges

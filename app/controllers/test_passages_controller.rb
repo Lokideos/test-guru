@@ -6,7 +6,13 @@ class TestPassagesController < ApplicationController
   def show; end
 
   def result
-    @badges = current_user.badges
+    @badges = []
+
+    current_user.badge_acquisitions.recently_created.each do |acquisition|
+      @badges << acquisition.badge
+    end
+
+    @badges
   end
 
   def update

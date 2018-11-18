@@ -17,14 +17,6 @@
     <% end %>
   </div>
 
-  <div class="badge-acquiring" style="min-height: 20px; border: 2px dashed blue;">
-    <% if @badges %>
-      <% @badges.each do |badge| %>
-        <%= badge.name %>
-      <% end %>
-    <% end %>
-  </div>
-
   <div class="back-link-grid">
     <div class="btn-test-passage">
       <%= button_to t('common.again'), start_test_path(@test_passage.test), class: 'btn' %>
@@ -32,5 +24,17 @@
     <div class="btn-test-passage">
       <%= button_to t('common.back'), tests_path, method: :get, class: 'btn' %>
     </div>
+  </div>
+
+  <div class="badge-acquiring">
+    <% if @badges %>
+      <ul>
+        <% @badges.each do |badge| %>
+        <div class="row justify-content-center">
+          <%= render badge %>
+        </div>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 </section>

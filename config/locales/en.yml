@@ -117,6 +117,7 @@ en:
     nav:
       admin_panel: 'Admin Panel'
       greetings: 'Welcome, %{email} Guru'
+      badges: 'Badges'
     footer:
       about: 'About'
       author: 'Author'
@@ -240,3 +241,7 @@ en:
   test_mailer:
     completed_test:
       subject: "You have completed the Test Guru test!"
+
+  badges:
+    index:
+      header: 'Acquired Badges'

@@ -96,11 +96,11 @@ badge_acquisition_rules = BadgeAcquisitionRule.create([{ name: 'Test completed w
                                                          acquisition_options: 3 }])
 
 Badge.create([{ name: '|Finish Category Badge|',
-                icon_path: 'path_to_icon.jpg',
+                icon_path: 'badge_icon.png',
                 badge_acquisition_rule: badge_acquisition_rules[1] },
               { name: '|First try test badge|',
-                icon_path: 'path_to_icon.jpg',
+                icon_path: 'badge_icon.png',
                 badge_acquisition_rule: badge_acquisition_rules[0] },
               { name: '|Finish level badge|',
-                icon_path: 'path_to_icon.jpg',
+                icon_path: 'badge_icon.png',
                 badge_acquisition_rule: badge_acquisition_rules[2] }])

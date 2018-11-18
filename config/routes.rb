@@ -3,11 +3,14 @@
 # rubocop:disable Metrics/BlockLength
 Rails.application.routes.draw do
   get '/:lang' => 'tests#index'
+  get '/:lang' => 'badges#index'
   root to: 'tests#index'
 
   scope '(:lang)', lang: /en|ru/ do
     devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
                        controllers: { sessions: 'users/sessions' }
+
+    resources :badges, only: :index
 
     resources :tests, only: :index do
       member do

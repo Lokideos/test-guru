@@ -86,6 +86,7 @@ ru:
     nav:
       admin_panel: 'Панель Администратора'
       greetings: 'Добро пожаловать, %{email} Гуру'
+      badges: 'Бэйджи'
     footer:
       about: 'О проекте'
       author: 'Об Авторе'
@@ -114,7 +115,7 @@ ru:
         questions_quantity: 'Вопросы'
         actions: 'Действия'
         show_gists: "Gists'ы"
-        show_badges: 'Бэйджы'
+        show_badges: 'Бэйджи'
       show:
         header: 'Тест %{title}'
         create_new_question: 'Новый Вопрос'
@@ -216,3 +217,7 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы завершили тест в TestGuru!"
+
+  badges:
+    index:
+      header: 'Полученные Бэйджи'

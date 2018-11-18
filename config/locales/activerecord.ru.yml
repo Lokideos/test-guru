@@ -25,6 +25,8 @@ ru:
       badge:
         name: 'Название'
         icon_path: 'Путь к изображению'
+        acquisition_type: 'Тип'
+        acquisition_options: 'Опции'
 
 
     errors:

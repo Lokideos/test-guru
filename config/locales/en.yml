@@ -195,6 +195,8 @@ en:
         name: 'Name'
         icon_path: 'Icon'
         new_badge: 'New Badge'
+        acqusition_type: 'Type'
+        acqusition_options: 'Options'
       show:
         name: 'Badge name: %{name}'
         icon_path: 'Path to icon'

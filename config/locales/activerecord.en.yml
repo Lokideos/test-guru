@@ -25,6 +25,8 @@ en:
       badge:
         name: 'Name'
         icon_path: 'Path to icon'
+        acquisition_type: 'Acqusition Type'
+        acquisition_options: 'Acqusition Options'
 
     errors:
       messages:

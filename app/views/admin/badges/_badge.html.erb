@@ -1,6 +1,8 @@
 <ul>
   <li><%= badge.name %></li>
   <li><%= badge.icon_path %></li>
+  <li><%= badge.acquisition_type %></li>
+  <li><%= badge.acquisition_options %></li>
   <li>
     <div class="btn-default-container">
       <%= button_to t('common.show'), admin_badge_path(badge), method: :get, class: 'btn-default btn' %>

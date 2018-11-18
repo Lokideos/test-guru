@@ -167,6 +167,8 @@ ru:
         name: 'Название'
         icon_path: 'Изображение'
         new_badge: 'Создать Бэйдж'
+        acqusition_type: 'Тип'
+        acqusition_options: 'Опции'
       show:
         name: 'Название бэйджа: %{name}'
         icon_path: 'Путь к изображению'

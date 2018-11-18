@@ -140,6 +140,7 @@ en:
         questions_quantity: 'Questions'
         actions: 'Actions'
         show_gists: 'Gists'
+        show_badges: 'Badges'
       show:
         header: '%{title} test'
         create_new_question: 'Create New Question'

@@ -7,6 +7,7 @@ ru:
       answer: 'Ответ'
       feedback: 'Отзыв'
       badge: 'Бэйдж'
+      badge_acquisition_rule: 'Условие присвоения Бэйджа'
 
     attributes:
       test:
@@ -25,8 +26,7 @@ ru:
       badge:
         name: 'Название'
         icon_path: 'Путь к изображению'
-        acquisition_type: 'Тип'
-        acquisition_options: 'Опции'
+        badge_acquisition_rule: 'Условие присвоения'
 
 
     errors:

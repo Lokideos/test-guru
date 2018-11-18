@@ -15,13 +15,8 @@
         </p>
 
         <p>
-          <%= form.label :acquisition_type %>
-          <%= form.text_field :acquisition_type, id: :badge_acquisition_type, class: "form-control" %>
-        </p>
-
-        <p>
-          <%= form.label :acquisition_options %>
-          <%= form.text_field :acquisition_options, id: :badge_acquisition_options, class: "form-control" %>
+          <%= form.label :badge_acquisition_rule_id %>
+          <%= form.collection_select :badge_acquisition_rule_id, BadgeAcquisitionRule.all, :id, :name, prompt: true, class: 'dropdown-menu' %>
         </p>
       </div>
 

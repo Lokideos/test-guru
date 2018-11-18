@@ -84,11 +84,15 @@ Answer.create([{ body: 'Correct Answer to ruby Metaprogramming question',
                { body: 'Answer to Unity assets creation through 3dmax', question: questions[11],
                  correct: true }])
 
-badge_acquisition_rules = BadgeAcquisitionRule.create([{ acquisition_type: 'first_try',
+badge_acquisition_rules = BadgeAcquisitionRule.create([{ name: 'Test completed with first try',
+                                                         acquisition_type: 'first_try',
                                                          acquisition_options: nil },
-                                                       { acquisition_type: 'category',
+                                                       { name: "All tests of #{categories[2].title}
+                                                                                        completed",
+                                                         acquisition_type: 'category',
                                                          acquisition_options: categories[2].title },
-                                                       { acquisition_type: 'level',
+                                                       { name: 'All tests of level 3 completed',
+                                                         acquisition_type: 'level',
                                                          acquisition_options: 3 }])
 
 Badge.create([{ name: '|Finish Category Badge|',

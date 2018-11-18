@@ -108,8 +108,10 @@ en:
         password: 'Password'
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me'
+      badge:
+        badge_acquisition_rule_id: 'Acquisition condition'
     select:
-      prompt: 'Select Category'
+      prompt: 'Select Option'
 
   shared:
     nav:
@@ -196,11 +198,11 @@ en:
         name: 'Name'
         icon_path: 'Icon'
         new_badge: 'New Badge'
-        acqusition_type: 'Type'
-        acqusition_options: 'Options'
+        acqusition_rule: 'Acquisition condition'
       show:
         name: 'Badge name: %{name}'
         icon_path: 'Path to icon'
+        badge_acquisition_rule: 'Acquisition condition'
       new:
         header: 'New Badge'
 

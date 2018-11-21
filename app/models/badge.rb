@@ -6,4 +6,6 @@ class Badge < ApplicationRecord
   belongs_to :badge_acquisition_rule
 
   validates :name, :icon_path, presence: true
+
+  SECONDS_FOR_RECENT_BADGES = 5
 end

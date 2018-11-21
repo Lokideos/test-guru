@@ -3,7 +3,6 @@
 # rubocop:disable Metrics/BlockLength
 Rails.application.routes.draw do
   get '/:lang' => 'tests#index'
-  get '/:lang' => 'badges#index'
   root to: 'tests#index'
 
   scope '(:lang)', lang: /en|ru/ do

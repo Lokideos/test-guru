@@ -66,10 +66,10 @@ class BadgeAwardService
   end
 
   def all_user_test_passages
-    TestPassage.where(test_id: @test_passage.test.id).where(user_id: @user.id)
+    TestPassage.where(test_id: @test_passage.test.id, user_id: @user.id)
   end
 
   def test_passage_exists_for_test?(test)
-    TestPassage.where(test_id: test.id).where(user_id: @user.id).first.nil?
+    TestPassage.where(test_id: test.id, user_id: @user.id).first.nil?
   end
 end

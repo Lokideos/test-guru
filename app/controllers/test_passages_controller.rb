@@ -19,7 +19,7 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      current_user.badges.push(Badge.check_acquire_conditions(@test_passage))
+      assign_badges(@test_passage, current_user)
 
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
@@ -49,5 +49,10 @@ class TestPassagesController < ApplicationController
     flash[:gist_create] = git_response.html_url
   rescue StandardError => e
     flash[:alert] = "#{t('.failure')}. #{t('.error_reason')}: #{e.response_status}"
+  end
+
+  def assign_badges(test_passage, user)
+    service = BadgeAwardService.new(test_passage, user)
+    user.badges.push(service.call)
   end
 end

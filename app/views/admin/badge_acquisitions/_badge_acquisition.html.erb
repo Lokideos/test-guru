@@ -1,0 +1,14 @@
+<ul>
+  <li><%= badge_acquisition.badge.name %></li>
+  <li><%= badge_acquisition.badge.icon_path %></li>
+  <li><%= badge_acquisition.user.email %></li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('.destroy'),
+              admin_badge_acquisition_path(badge_acquisition),
+              method: :delete,
+              data: { confirm: t('data.messages.delete_confirmation') },
+              class: 'btn-default btn' %>    
+    </div>
+  </li>
+</ul>

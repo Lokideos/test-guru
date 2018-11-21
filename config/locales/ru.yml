@@ -172,12 +172,22 @@ ru:
         icon_path: 'Изображение'
         new_badge: 'Создать Бэйдж'
         acqusition_rule: 'Условие присвоения'
+        user_badges: 'Бейджи пользователей'
       show:
         name: 'Название бэйджа: %{name}'
         icon_path: 'Путь к изображению'
         badge_acquisition_rule: 'Условие присвоения'
       new:
         header: 'Новый Бэйдж'
+
+    badge_acquisitions:
+      badge_acquisition:
+        destroy: 'Удалить'
+      index:
+        name: 'Название'
+        icon_path: 'Изображение'
+        user: 'Пользователь'
+        header: 'Бейджи пользователей'
 
 
   tests:

@@ -200,12 +200,22 @@ en:
         icon_path: 'Icon'
         new_badge: 'New Badge'
         acqusition_rule: 'Acquisition condition'
+        user_badges: 'User badges'
       show:
         name: 'Badge name: %{name}'
         icon_path: 'Path to icon'
         badge_acquisition_rule: 'Acquisition condition'
       new:
         header: 'New Badge'
+
+    badge_acquisitions:
+      badge_acquisition:
+        destroy: 'Delete'
+      index:
+        name: 'Name'
+        icon_path: 'Icon'
+        user: 'User'
+        header: 'Badges of users'
 
   tests:
     test:

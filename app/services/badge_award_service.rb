@@ -28,7 +28,7 @@ class BadgeAwardService
 
     Test.by_category(category).each do |test|
       all_tests_of_category_done = false
-      break if test_passage_exists_for_test?(test)
+      break unless test_passage_exists_for_test?(test)
 
       passages.each do |passage|
         all_tests_of_category_done = true if passage.test_passed?
@@ -55,7 +55,7 @@ class BadgeAwardService
 
     Test.with_level(level).each do |test|
       all_tests_of_level_done = false
-      break if test_passage_exists_for_test?(test)
+      break unless test_passage_exists_for_test?(test)
 
       passages.each do |passage|
         all_tests_of_level_done = true if passage.test_passed?
@@ -70,6 +70,6 @@ class BadgeAwardService
   end
 
   def test_passage_exists_for_test?(test)
-    TestPassage.where(test_id: test.id, user_id: @user.id).first.nil?
+    TestPassage.where(test_id: test.id, user_id: @user.id).first
   end
 end

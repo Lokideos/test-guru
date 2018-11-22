@@ -254,4 +254,5 @@ en:
 
   badges:
     index:
-      header: 'Acquired Badges'
+      badges_header: 'Acquired Badges'
+      badge_types_header: 'Badges types'

@@ -230,4 +230,5 @@ ru:
 
   badges:
     index:
-      header: 'Полученные Бэйджи'
+      badges_header: 'Полученные Бэйджи'
+      badge_types_header: 'Типы Бэйджей'

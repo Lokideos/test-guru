@@ -2,9 +2,6 @@
 
 # rubocop:disable Metrics/BlockLength
 Rails.application.routes.draw do
-  get '/:lang' => 'tests#index'
-  root to: 'tests#index'
-
   scope '(:lang)', lang: /en|ru/ do
     devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
                        controllers: { sessions: 'users/sessions' }
@@ -41,5 +38,9 @@ Rails.application.routes.draw do
       resources :badge_acquisitions, only: %i[index destroy]
     end
   end
+
+  # It's a powerful magic
+  get '/:lang' => 'tests#index'
+  root to: 'tests#index'
 end
 # rubocop:enable Metrics/BlockLength

@@ -6,21 +6,13 @@ class TestPassagesController < ApplicationController
   def show; end
 
   def result
-    @badges = []
-
-    current_user.badge_acquisitions.recently_created.each do |acquisition|
-      @badges << acquisition.badge
-    end
-
-    @badges
+    @badges = assign_badges(@test_passage) if @test_passage.completed?
   end
 
   def update
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      assign_badges(@test_passage)
-
       # TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
@@ -55,5 +47,6 @@ class TestPassagesController < ApplicationController
     user = test_passage.user
     badges = BadgeAwardService.new(test_passage, user).call
     user.badges.push(badges)
+    badges
   end
 end

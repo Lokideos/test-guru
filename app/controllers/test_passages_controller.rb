@@ -19,7 +19,7 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
-      assign_badges(@test_passage, current_user)
+      assign_badges(@test_passage)
 
       # TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
@@ -51,8 +51,9 @@ class TestPassagesController < ApplicationController
     flash[:alert] = "#{t('.failure')}. #{t('.error_reason')}: #{e.response_status}"
   end
 
-  def assign_badges(test_passage, user)
-    service = BadgeAwardService.new(test_passage, user)
-    user.badges.push(service.call)
+  def assign_badges(test_passage)
+    user = test_passage.user
+    badges = BadgeAwardService.new(test_passage, user).call
+    user.badges.push(badges)
   end
 end

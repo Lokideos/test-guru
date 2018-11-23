@@ -6,6 +6,8 @@ ru:
       question: 'Вопрос'
       answer: 'Ответ'
       feedback: 'Отзыв'
+      badge: 'Бэйдж'
+      badge_acquisition_rule: 'Условие присвоения Бэйджа'
 
     attributes:
       test:
@@ -21,6 +23,10 @@ ru:
         correct: 'Правильность'
       feedback:
         text: 'Текст'
+      badge:
+        name: 'Название'
+        icon_path: 'Путь к изображению'
+        badge_acquisition_rule: 'Условие присвоения'
 
 
     errors:

@@ -1,0 +1,24 @@
+<ul>
+  <li><%= badge.name %></li>
+  <li><%= badge.icon_path %></li>
+  <li><%= badge.badge_acquisition_rule.name %></li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.show'), admin_badge_path(badge), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('common.edit'), edit_admin_badge_path(badge), method: :get, class: 'btn-default btn' %>
+    </div>
+  </li>
+  <li>
+    <div class="btn-default-container">
+      <%= button_to t('.destroy'),
+              admin_badge_path(badge),
+              method: :delete,
+              data: { confirm: t('data.messages.delete_confirmation') },
+              class: 'btn-default btn' %>    
+    </div>
+  </li>
+</ul>

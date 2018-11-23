@@ -5,7 +5,9 @@ class TestPassagesController < ApplicationController
 
   def show; end
 
-  def result; end
+  def result
+    @badges = assign_badges(@test_passage) if @test_passage.completed?
+  end
 
   def update
     @test_passage.accept!(params[:answer_ids])
@@ -39,5 +41,12 @@ class TestPassagesController < ApplicationController
     flash[:gist_create] = git_response.html_url
   rescue StandardError => e
     flash[:alert] = "#{t('.failure')}. #{t('.error_reason')}: #{e.response_status}"
+  end
+
+  def assign_badges(test_passage)
+    user = test_passage.user
+    badges = BadgeAwardService.new(test_passage, user).call
+    user.badges.push(badges)
+    badges
   end
 end

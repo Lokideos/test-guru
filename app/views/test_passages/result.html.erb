@@ -25,4 +25,16 @@
       <%= button_to t('common.back'), tests_path, method: :get, class: 'btn' %>
     </div>
   </div>
+
+  <div class="badge-acquiring">
+    <% if @badges %>
+      <ul>
+        <% @badges.each do |badge| %>
+        <div class="row justify-content-center">
+          <%= render badge %>
+        </div>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 </section>

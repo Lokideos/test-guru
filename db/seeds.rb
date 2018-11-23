@@ -39,11 +39,11 @@ tests = Test.create([{ title: 'Ruby', level: 0, category: categories[0], author:
                      { title: 'CSS3', level: 1, category: categories[1], author: users[1] },
                      { title: 'JS basics', level: 1, category: categories[1],
                        author: users[2] },
-                     { title: 'Unity Fundamentals', level: 0, category: categories[2],
+                     { title: 'Unity Fundamentals', level: 3, category: categories[2],
                        author: users[2] },
-                     { title: 'Unity Scripting', level: 1, category: categories[2],
+                     { title: 'Unity Scripting', level: 3, category: categories[2],
                        author: users[2] },
-                     { title: 'Unity Art', level: 1, category: categories[2], author: users[2] }])
+                     { title: 'Unity Art', level: 3, category: categories[2], author: users[2] }])
 
 questions = Question.create([{ body: 'Ruby Metaprogramming question', test: tests[0] },
                              { body: 'Ruby Exceptions question', test: tests[0] },
@@ -77,6 +77,30 @@ Answer.create([{ body: 'Correct Answer to ruby Metaprogramming question',
                { body: 'Answer to HTML5 video question', question: questions[6] },
                { body: 'Answer to CSS3 flexbox grid question', question: questions[7] },
                { body: 'Answer to JS basics control flow question', question: questions[8] },
-               { body: 'Answer to Unity project structure question', question: questions[9] },
-               { body: 'Answer to Unity reactive programming paradigm', question: questions[10] },
-               { body: 'Answer to Unity assets creation through 3dmax', question: questions[11] }])
+               { body: 'Answer to Unity project structure question', question: questions[9],
+                 correct: true },
+               { body: 'Answer to Unity reactive programming paradigm', question: questions[10],
+                 correct: true },
+               { body: 'Answer to Unity assets creation through 3dmax', question: questions[11],
+                 correct: true }])
+
+badge_acquisition_rules = BadgeAcquisitionRule.create([{ name: 'Test completed with first try',
+                                                         acquisition_type: 'first_try',
+                                                         acquisition_options: nil },
+                                                       { name: "All tests of #{categories[2].title}
+                                                                                        completed",
+                                                         acquisition_type: 'category',
+                                                         acquisition_options: categories[2].title },
+                                                       { name: 'All tests of level 3 completed',
+                                                         acquisition_type: 'level',
+                                                         acquisition_options: 3 }])
+
+Badge.create([{ name: '|Finish Category Badge|',
+                icon_path: 'badge_icon.png',
+                badge_acquisition_rule: badge_acquisition_rules[1] },
+              { name: '|First try test badge|',
+                icon_path: 'badge_icon.png',
+                badge_acquisition_rule: badge_acquisition_rules[0] },
+              { name: '|Finish level badge|',
+                icon_path: 'badge_icon.png',
+                badge_acquisition_rule: badge_acquisition_rules[2] }])

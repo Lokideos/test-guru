@@ -1,0 +1,27 @@
+<section class="all-badges">
+  <div class="row justify-content-center mt-3">
+    <div class="col col-md-4">
+      <h1><%= t('.header') %></h1>
+    </div>
+  </div>
+
+  <%= render 'shared/errors', resource: @badge %>
+
+  <div class="row justify-content-center">
+    <div class="col col-md-10">
+      <div class="badges-table">
+        <header>
+          <ul>
+            <li><%= t('.name') %></li>
+            <li><%= t('.icon_path') %></li>
+            <li><%= t('.user')%></li>
+            <li></li>
+          </ul>
+        </header>
+        <div class="badges-table-content">
+          <%= render @badge_acquisitions %>        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

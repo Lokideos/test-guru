@@ -108,13 +108,16 @@ en:
         password: 'Password'
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me'
+      badge:
+        badge_acquisition_rule_id: 'Acquisition condition'
     select:
-      prompt: 'Select Category'
+      prompt: 'Select Option'
 
   shared:
     nav:
       admin_panel: 'Admin Panel'
       greetings: 'Welcome, %{email} Guru'
+      badges: 'Badges'
     footer:
       about: 'About'
       author: 'Author'
@@ -140,6 +143,7 @@ en:
         questions_quantity: 'Questions'
         actions: 'Actions'
         show_gists: 'Gists'
+        show_badges: 'Badges'
       show:
         header: '%{title} test'
         create_new_question: 'Create New Question'
@@ -187,6 +191,32 @@ en:
         url: 'URL'
         user: 'author'
 
+    badges:
+      badge:
+        destroy: 'Destroy'
+      index:
+        header: 'Badges'
+        name: 'Name'
+        icon_path: 'Icon'
+        new_badge: 'New Badge'
+        acqusition_rule: 'Acquisition condition'
+        user_badges: 'User badges'
+      show:
+        name: 'Badge name: %{name}'
+        icon_path: 'Path to icon'
+        badge_acquisition_rule: 'Acquisition condition'
+      new:
+        header: 'New Badge'
+
+    badge_acquisitions:
+      badge_acquisition:
+        destroy: 'Delete'
+      index:
+        name: 'Name'
+        icon_path: 'Icon'
+        user: 'User'
+        header: 'Badges of users'
+
   tests:
     test:
       start: 'Start'
@@ -221,3 +251,8 @@ en:
   test_mailer:
     completed_test:
       subject: "You have completed the Test Guru test!"
+
+  badges:
+    index:
+      badges_header: 'Acquired Badges'
+      badge_types_header: 'Badges types'

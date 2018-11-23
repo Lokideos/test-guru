@@ -1,0 +1,27 @@
+<section class="acquired-badges">
+  <h1 class="visually-hidden">Badges</h1>
+
+  <div class="row justify-content-center mt-2">
+    <h2 class="badge-types-headline"><%= t('.badge_types_header') %></h1>
+  </div>
+
+  <div class="row-justify-content-center mt-3">
+    <ul class="badge-types-list">
+      <% @badge_types.each do |badge_type| %>
+        <li>
+          <%= render 'badges/badge_type', badge: badge_type %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="row justify-content-center mt-2">
+    <h2 class="badge-types-headline"><%= t('.badges_header') %></h1>
+  </div>
+
+  <div class="row-justify-content-center mt-3">
+    <ul class="badges-list">
+      <%= render @badges %>
+    </ul>
+  </div>
+</section>

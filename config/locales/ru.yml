@@ -77,13 +77,16 @@ ru:
         password: 'Пароль'
         remember_me: 'Запомнить'
         password_confirmation: 'Подтверждение пароля'
+      badge:
+        badge_acquisition_rule_id: 'Условие присвоения'
     select:
-      prompt: 'Выберите Категорию'
+      prompt: 'Выберите Опцию'
 
   shared:
     nav:
       admin_panel: 'Панель Администратора'
       greetings: 'Добро пожаловать, %{email} Гуру'
+      badges: 'Бэйджи'
     footer:
       about: 'О проекте'
       author: 'Об Авторе'
@@ -112,6 +115,7 @@ ru:
         questions_quantity: 'Вопросы'
         actions: 'Действия'
         show_gists: "Gists'ы"
+        show_badges: 'Бэйджи'
       show:
         header: 'Тест %{title}'
         create_new_question: 'Новый Вопрос'
@@ -159,6 +163,33 @@ ru:
         url: 'Ссылка'
         user: 'Автор'
 
+    badges:
+      badge:
+        destroy: 'Удалить'
+      index:
+        header: 'Бэйджи'
+        name: 'Название'
+        icon_path: 'Изображение'
+        new_badge: 'Создать Бэйдж'
+        acqusition_rule: 'Условие присвоения'
+        user_badges: 'Бейджи пользователей'
+      show:
+        name: 'Название бэйджа: %{name}'
+        icon_path: 'Путь к изображению'
+        badge_acquisition_rule: 'Условие присвоения'
+      new:
+        header: 'Новый Бэйдж'
+
+    badge_acquisitions:
+      badge_acquisition:
+        destroy: 'Удалить'
+      index:
+        name: 'Название'
+        icon_path: 'Изображение'
+        user: 'Пользователь'
+        header: 'Бейджи пользователей'
+
+
   tests:
     test:
       start: 'Пройти тест'
@@ -169,6 +200,9 @@ ru:
       level: 'Сложность'
       questions_quantity: 'Вопросы'
       sorting: 'Сортировать'
+
+
+
 
   test_passages:
     show:
@@ -193,3 +227,8 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы завершили тест в TestGuru!"
+
+  badges:
+    index:
+      badges_header: 'Полученные Бэйджи'
+      badge_types_header: 'Типы Бэйджей'

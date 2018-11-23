@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acquisition_type: MyString
+  acquisition_options: MyString
+
+two:
+  acquisition_type: MyString
+  acquisition_options: MyString

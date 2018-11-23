@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_231631) do
+ActiveRecord::Schema.define(version: 2018_11_18_092619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,32 @@ ActiveRecord::Schema.define(version: 2018_11_11_231631) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "badge_acquisition_rules", force: :cascade do |t|
+    t.string "acquisition_type", null: false
+    t.string "acquisition_options"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name", null: false
+  end
+
+  create_table "badge_acquisitions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "badge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["badge_id"], name: "index_badge_acquisitions_on_badge_id"
+    t.index ["user_id"], name: "index_badge_acquisitions_on_user_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "icon_path", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "badge_acquisition_rule_id"
+    t.index ["badge_acquisition_rule_id"], name: "index_badges_on_badge_acquisition_rule_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -104,6 +130,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_231631) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "badges", "badge_acquisition_rules"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
   add_foreign_key "questions", "tests"

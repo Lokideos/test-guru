@@ -3,6 +3,12 @@
     <div class="test-title">
       <h1><%= t('.header', test_title: @test_passage.test.title ) %></h1>
 
+      <%= content_tag :div, class: 'test-timer-bar' do %>
+        <%= content_tag :div, class: 'test-timer-remaining-time' do %>
+          <%= @test_passage.completion_time %>
+        <% end %>
+      <% end %>
+
       <%= content_tag :div, class: 'test-progress-bar' do %>
         <%= content_tag :div, class: 'test-current-progress' do %>
         <% end %>

@@ -40,10 +40,11 @@ tests = Test.create([{ title: 'Ruby', level: 0, category: categories[0], author:
                      { title: 'JS basics', level: 1, category: categories[1],
                        author: users[2] },
                      { title: 'Unity Fundamentals', level: 3, category: categories[2],
-                       author: users[2] },
+                       author: users[2], timer: 50 },
                      { title: 'Unity Scripting', level: 3, category: categories[2],
-                       author: users[2] },
-                     { title: 'Unity Art', level: 3, category: categories[2], author: users[2] }])
+                       author: users[2], timer: 100 },
+                     { title: 'Unity Art', level: 3, category: categories[2],
+                       author: users[2], timer: 2 }])
 
 questions = Question.create([{ body: 'Ruby Metaprogramming question', test: tests[0] },
                              { body: 'Ruby Exceptions question', test: tests[0] },

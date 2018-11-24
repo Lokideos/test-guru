@@ -36,6 +36,14 @@ class TestPassage < ApplicationRecord
     self.completion_time = Time.now + test.timer unless completion_time
   end
 
+  def finish_test
+    self.current_question = nil
+  end
+
+  def time_is_up?
+    (completion_time - Time.now).negative?
+  end
+
   private
 
   def before_validation_set_next_question

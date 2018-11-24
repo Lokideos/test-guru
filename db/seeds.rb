@@ -30,7 +30,7 @@ categories = Category.create([{ title: 'Backend web development' },
                               { title: 'Game development' }])
 
 tests = Test.create([{ title: 'Ruby', level: 0, category: categories[0],
-                       author: users[0], timer: 50 },
+                       author: users[0], timer: 4 },
                      { title: 'Rails', level: 1, category: categories[0], author: users[0] },
                      { title: 'Node JS', level: 1, category: categories[0], author: users[0] },
                      { title: 'Advanced Rails', level: 2, category: categories[0],

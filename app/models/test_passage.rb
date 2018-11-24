@@ -31,6 +31,8 @@ class TestPassage < ApplicationRecord
   end
 
   def set_timer
+    return unless test.timer
+
     self.completion_time = Time.now + test.timer unless completion_time
   end
 

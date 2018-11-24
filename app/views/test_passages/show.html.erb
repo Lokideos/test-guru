@@ -3,9 +3,15 @@
     <div class="test-title">
       <h1><%= t('.header', test_title: @test_passage.test.title ) %></h1>
 
-      <%= content_tag :div, class: 'test-timer-bar' do %>
-        <%= content_tag :div, class: 'test-timer-remaining-time' do %>
-          <%= @test_passage.completion_time %>
+      <% if @test_passage.completion_time %>
+        <%= content_tag :div, class: 'test-timer-bar' do %>
+          <%= content_tag :div, class: 'test-timer-remaining-time' do %>
+            <% if Time.now < @test_passage.completion_time %>
+              <%= @test_passage.completion_time - Time.now %>
+            <% else %>
+              0
+            <% end %>
+          <% end %>
         <% end %>
       <% end %>
 

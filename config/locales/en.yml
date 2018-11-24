@@ -224,6 +224,9 @@ en:
       start: 'Start'
       level: 'Level'
       questions_quantity: 'Questions'
+      timer: 'Timer'
+      seconds: 'seconds'
+      not_set: 'Not set'
     index:
       header: 'Pick up Test'
       level: 'Level'

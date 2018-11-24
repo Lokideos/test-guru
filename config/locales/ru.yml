@@ -191,20 +191,19 @@ ru:
         user: 'Пользователь'
         header: 'Бейджи пользователей'
 
-
   tests:
     test:
       start: 'Пройти тест'
       level: 'Сложность'
       questions_quantity: 'Вопросы'
+      timer: 'Время'
+      not_set: 'Не задано'
+      seconds: 'секунд'
     index:
       header: 'Выберите Тест'
       level: 'Сложность'
       questions_quantity: 'Вопросы'
       sorting: 'Сортировать'
-
-
-
 
   test_passages:
     show:

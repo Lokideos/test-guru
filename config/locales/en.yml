@@ -140,6 +140,7 @@ en:
         new_test: 'Create Test'
         title: 'Title'
         level: 'Level'
+        timer: 'Timer'
         questions_quantity: 'Questions'
         actions: 'Actions'
         show_gists: 'Gists'
@@ -152,6 +153,7 @@ en:
         title: 'Title: %{title}'
         category: 'Category: %{category}'
         level: 'Level: %{level}'
+        timer: 'Timer: %{timer}'
         questions: 'Questions'
       edit:
         header: 'Edit  %{title}'

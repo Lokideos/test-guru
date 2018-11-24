@@ -13,6 +13,7 @@ en:
         title: 'Title'
         level: 'Level'
         category: 'Category'
+        timer: 'Timer'
       test_passage:
         correct_questions: 'Correct questions'
       question:

@@ -30,6 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  js:
+    timer:
+      minutes: 'm'
+      seconds: 's'
+      expired: 'EXPIRED'
+
   helper_methods:
     application:
       flash_message:
@@ -241,7 +247,6 @@ en:
       next_question: 'Next'
       gist_question: 'Gist Question'
       remaining_time: 'Remaining time'
-      seconds: 'seconds'
     result:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'

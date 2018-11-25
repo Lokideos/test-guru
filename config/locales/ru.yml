@@ -1,4 +1,10 @@
 ru:
+  js:
+    timer:
+      minutes: 'м'
+      seconds: 'с'
+      expired: 'ИСТЕКЛО'
+
   helper_methods:
     application:
       flash_message:
@@ -213,7 +219,6 @@ ru:
       next_question: 'Далее'
       gist_question: 'В Gist'
       remaining_time: 'Оставшееся время'
-      seconds: 'секунд'
     result:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'

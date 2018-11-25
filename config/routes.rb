@@ -39,7 +39,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # It's a powerful magic
   get '/:lang' => 'tests#index'
   root to: 'tests#index'
 end

@@ -36,6 +36,11 @@ class TestPassage < ApplicationRecord
     self.completion_time = Time.now + test.timer unless completion_time
   end
 
+  def set_timer!
+    set_timer
+    save!
+  end
+
   def finish_test
     self.current_question = nil
   end

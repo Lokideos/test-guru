@@ -46,7 +46,7 @@ class TestPassage < ApplicationRecord
   end
 
   def time_is_up?
-    (completion_time - Time.now).negative?
+    (completion_time - Time.now).negative? if completion_time
   end
 
   private

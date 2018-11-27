@@ -10,7 +10,7 @@ document.addEventListener('turbolinks:load', function() {
 
       var now = new Date().getTime();
 
-      var distance = remainingTime - now;
+      var distance = (remainingTime + 1000) - now;
       
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);

@@ -1,4 +1,10 @@
 ru:
+  js:
+    timer:
+      minutes: 'м'
+      seconds: 'с'
+      expired: 'ИСТЕКЛО'
+
   helper_methods:
     application:
       flash_message:
@@ -112,6 +118,7 @@ ru:
         new_test: 'Создать Тест'
         title: 'Название'
         level: 'Сложность'
+        timer: 'Время'
         questions_quantity: 'Вопросы'
         actions: 'Действия'
         show_gists: "Gists'ы"
@@ -124,6 +131,7 @@ ru:
         title: 'Название: %{title}'
         category: 'Категория: %{category}'
         level: 'Сложность: %{level}'
+        timer: 'Время: %{timer}'
         questions: 'Вопросы'
       edit:
         header: 'Редактировать %{title}'
@@ -189,20 +197,19 @@ ru:
         user: 'Пользователь'
         header: 'Бейджи пользователей'
 
-
   tests:
     test:
       start: 'Пройти тест'
       level: 'Сложность'
       questions_quantity: 'Вопросы'
+      timer: 'Время'
+      not_set: 'Не задано'
+      seconds: 'секунд'
     index:
       header: 'Выберите Тест'
       level: 'Сложность'
       questions_quantity: 'Вопросы'
       sorting: 'Сортировать'
-
-
-
 
   test_passages:
     show:
@@ -211,6 +218,7 @@ ru:
       current_question: 'Текущий вопрос: %{number}'
       next_question: 'Далее'
       gist_question: 'В Gist'
+      remaining_time: 'Оставшееся время'
     result:
       test_completed: 'Поздравляем! Вы успешно прошли %{title} тест!'
       test_failed: 'Вы не смогли пройти %{title} тест! Попробуйте ещё раз!'

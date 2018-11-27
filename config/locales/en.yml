@@ -30,6 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  js:
+    timer:
+      minutes: 'm'
+      seconds: 's'
+      expired: 'EXPIRED'
+
   helper_methods:
     application:
       flash_message:
@@ -140,6 +146,7 @@ en:
         new_test: 'Create Test'
         title: 'Title'
         level: 'Level'
+        timer: 'Timer'
         questions_quantity: 'Questions'
         actions: 'Actions'
         show_gists: 'Gists'
@@ -152,6 +159,7 @@ en:
         title: 'Title: %{title}'
         category: 'Category: %{category}'
         level: 'Level: %{level}'
+        timer: 'Timer: %{timer}'
         questions: 'Questions'
       edit:
         header: 'Edit  %{title}'
@@ -222,6 +230,9 @@ en:
       start: 'Start'
       level: 'Level'
       questions_quantity: 'Questions'
+      timer: 'Timer'
+      seconds: 'seconds'
+      not_set: 'Not set'
     index:
       header: 'Pick up Test'
       level: 'Level'
@@ -235,6 +246,7 @@ en:
       current_question: 'Current Question: %{number}'
       next_question: 'Next'
       gist_question: 'Gist Question'
+      remaining_time: 'Remaining time'
     result:
       test_completed: 'Cogratulations! You have completed %{title} test!'
       test_failed: 'You have failed %{title} test! Try again!'

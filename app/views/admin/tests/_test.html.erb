@@ -5,6 +5,7 @@
   </li>
   <li><%= test.level %></li>
   <li><%= test.questions.count %></li>
+  <li><%= test.timer %></li>
   <li>
     <div class="btn-default-container">
       <%= button_to t('common.show'), admin_test_path(test), method: :get, class: 'btn-default btn' %>

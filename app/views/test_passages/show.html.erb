@@ -3,6 +3,22 @@
     <div class="test-title">
       <h1><%= t('.header', test_title: @test_passage.test.title ) %></h1>
 
+      <% if @test_passage.completion_time %>
+        <%= content_tag :div, class: 'test-timer-bar mt-2' do %>
+          <%= content_tag :div, class: 'test-timer-remaining-time' do %>
+            <%= t('.remaining_time') %>:
+            <%= content_tag :div, class: "test-timer-value" do %>
+              <% if Time.now < @test_passage.completion_time %>              
+                <%= @test_passage.completion_time %>
+              <% else %>
+                0
+              <% end %>
+            <% end %>
+            <%= t('.seconds') %>
+          <% end %>
+        <% end %>
+      <% end %>
+
       <%= content_tag :div, class: 'test-progress-bar' do %>
         <%= content_tag :div, class: 'test-current-progress' do %>
         <% end %>
@@ -31,7 +47,7 @@
         <% end %>        
 
         <div class="btn-test-passage">
-          <%= form.submit t('.next_question'), class: "btn" %>
+          <%= form.submit t('.next_question'), class: "btn next-question-button" %>
         </div>
       </div>
     <% end %>

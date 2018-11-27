@@ -10,7 +10,8 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    @test_passage.accept!(params[:answer_ids]) unless @test_passage.time_is_up?
+    @test_passage.finish_test if @test_passage.time_is_up?
 
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now

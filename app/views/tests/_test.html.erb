@@ -2,4 +2,13 @@
   <p class="test-title"><%= test.title %></p>
   <p class="test-level"><%= t('.level') %>: <%= level_in_human_form(test) %></p>
   <p class="test-questions-qty"><%= t('.questions_quantity') %>: <%= test.questions.count %></p>
+  <p class="test-questions-timer">
+    <%= t('.timer') %>: 
+    <% if test.timer %>
+      <%= test.timer %>
+      <%= t('.seconds') %>
+    <% else %>
+      <%= t('.not_set') %>
+    <% end %>    
+  </p>  
 <% end %>
